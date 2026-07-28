@@ -15,68 +15,6 @@ body {
     padding: 0 20px;
 }
 
-/* ================= النشرة البريدية ================= */
-.newsletter-section {
-    background-color: #1b6392;
-    color: #ffffff;
-    text-align: center;
-    padding: 70px 0;
-}
-
-.newsletter-section h2 { font-size: 32px; margin-bottom: 15px; }
-.newsletter-desc { font-size: 15px; color: #cde2f0; margin-bottom: 35px; line-height: 1.6; }
-
-.subscribe-form {
-    display: flex;
-    justify-content: center;
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-    background-color: #fff;
-    border-radius: 4px;
-    padding: 5px;
-}
-
-.subscribe-form input {
-    flex: 1;
-    border: none;
-    padding: 15px 20px;
-    font-size: 15px;
-    outline: none;
-    border-radius: 4px;
-}
-
-.subscribe-form button {
-    background-color: #fa8232;
-    color: #fff;
-    border: none;
-    padding: 0 35px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.subscribe-form button:hover { background-color: #e0722a; }
-
-.brands-logos {
-    display: flex;
-    justify-content: center;
-    gap: 45px;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.brands-logos svg {
-    transition: color 0.3s ease;
-    cursor: pointer;
-}
-
-.brands-logos svg:hover {
-    color: rgba(255, 255, 255, 1);
-}
 
 /* ================= الفوتر الداكن ================= */
 .footer-section {
