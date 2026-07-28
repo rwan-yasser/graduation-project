@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= النشرة البريدية ================= */
+.newsletter-section {
+    background-color: #1b6392;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.newsletter-section h2 { font-size: 32px; margin-bottom: 15px; }
+.newsletter-desc { font-size: 15px; color: #cde2f0; margin-bottom: 35px; line-height: 1.6; }
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    border: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    outline: none;
+    border-radius: 4px;
+}
+
+.subscribe-form button {
+    background-color: #fa8232;
+    color: #fff;
+    border: none;
+    padding: 0 35px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.subscribe-form button:hover { background-color: #e0722a; }
+
+/* تنسيق لوجوهات الشركات باستخدام SVG */
+.brands-logos {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.brands-logos svg {
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.brands-logos svg:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* ================= الفوتر الداكن ================= */
+.footer-section {
+    background-color: #191c1f;
+    color: #8d9297;
+    padding-top: 70px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.footer-col { flex: 1; min-width: 180px; }
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 12px; }
+.footer-col ul li a { color: #8d9297; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+.footer-col ul li a:hover { color: #ffffff; }
+
+.browse-all {
+    display: inline-block;
+    margin-top: 10px;
+    color: #eab308;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* العمود الأول */
+.brand-col { flex: 1.5; }
+.footer-logo { color: #ffffff; font-size: 28px; font-weight: bold; display: flex; align-items: center; gap: 10px; margin-bottom: 25px; }
+.logo-icon {
+    width: 35px; height: 35px; background-color: #fa8232; border-radius: 50%; display: inline-block; position: relative;
+}
+.logo-icon::after {
+    content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 15px; height: 15px; background-color: #191c1f; border-radius: 50%;
+}
+.support-title { font-size: 13px; margin-bottom: 5px; }
+.phone-number { color: #ffffff; font-size: 18px !important; margin-bottom: 15px !important; text-transform: none !important; }
+.address, .email { font-size: 14px; margin-bottom: 10px; line-height: 1.6; }
+.email strong { color: #ffffff; }
+
+/* أزرار التطبيقات */
+.app-col { min-width: 200px; }
+.app-btn {
+    display: flex;
+    align-items: center;
+    background-color: #30363c;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    gap: 15px;
+    transition: background 0.3s;
+}
+.app-btn:hover { background-color: #40474e; }
+.app-icon { font-size: 26px; color: #ffffff; }
+.app-text span { display: block; font-size: 11px; color: #8d9297; margin-bottom: 2px; }
+.app-text strong { font-size: 15px; }
+
+/* الكلمات المفتاحية */
+.tags-col { flex: 1.5; }
+.tags-container { display: flex; flex-wrap: wrap; gap: 10px; }
+.tags-container a {
+    color: #ffffff; text-decoration: none; font-size: 13px; padding: 6px 12px;
+    border: 1px solid #30363c; border-radius: 2px; transition: all 0.3s;
+}
+.tags-container a:hover { border-color: #ffffff; background-color: #30363c; }
+
+
+.footer-bottom { border-top: 1px solid #30363c; padding: 20px 0; text-align: center; background-color: #191c1f; }
+.footer-bottom p { font-size: 14px; color: #8d9297; }
+
+/* ================= النوافذ المنبثقة (Modals) ================= */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+.close-modal:hover { color: #000; }
+.modal-content h3 { color: #fa8232; margin-bottom: 15px; font-size: 24px; }
+.modal-content p { color: #333; font-size: 16px; line-height: 1.5; }
