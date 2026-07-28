@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
 
-    // ================= (2) كود التطبيقات (Coming Soon) =================
+    // =================  كود التطبيقات (Coming Soon) =================
    
     const comingSoonBtns = document.querySelectorAll('.coming-soon-btn');
     const comingSoonModal = document.getElementById('coming-soon-modal');
