@@ -24,6 +24,1521 @@
 <body>
 
 
+    <!-- ================= HEADER SECTION ================= -->
+    <header class="site-header">
+
+        <!-- 1. Top Black Friday Offer Bar Widget -->
+        <div class="top-bar-widget" id="topOfferWidget">
+            <div class="container d-flex align-items-center justify-content-between position-relative">
+                <div class="d-flex align-items-center gap-2 mx-auto">
+                    <span class="badge-black">Black</span>
+                    <span class="friday-text">Friday</span>
+                    <span class="discount-text">Up to <strong class="text-warning fw-bold">59%</strong> OFF</span>
+                    <a href="#products" class="btn-shop-now ms-3">
+                        SHOP NOW <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <button type="button" class="close-bar-btn" id="closeWidgetBtn" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 2. Blue Header Container (Navigation & Middle Nav) -->
+        <div class="blue-header-bg">
+
+            <!-- Top Nav Info Header -->
+            <div class="top-nav-bar py-2 border-bottom-blue">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <p class="welcome-msg mb-0">Welcome to Clicon online eCommerce store.</p>
+
+                    <div class="top-nav-right d-flex align-items-center gap-3">
+                        <div class="social-links d-flex align-items-center gap-2">
+                            <span>Follow us:</span>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                        <span class="v-divider"></span>
+                        <div class="lang-curr-select d-flex gap-2">
+                            <select class="form-select form-select-sm border-0 bg-transparent text-white">
+                                <option value="eng" class="text-dark">Eng</option>
+                            </select>
+                            <select class="form-select form-select-sm border-0 bg-transparent text-white">
+                                <option value="usd" class="text-dark">USD</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Nav (Logo, Search, Cart) -->
+            <div class="middle-nav-bar py-3">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <!-- Logo -->
+                    <a href="#" class="logo d-flex align-items-center gap-2 text-white">
+                        <i class="fa-regular fa-circle-dot logo-icon"></i>
+                        <span class="logo-text">CLICON</span>
+                    </a>
+
+                    <!-- Search Box -->
+                    <form class="search-box position-relative" id="searchForm">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search for anything...">
+                        <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+
+                    <!-- User Icons -->
+                    <div class="nav-icons d-flex align-items-center gap-3 text-white">
+                        <a href="#" class="cart-icon position-relative text-white">
+                            <i class="fa-solid fa-cart-shopping fs-5"></i>
+                            <span class="cart-badge">2</span>
+                        </a>
+                        <a href="#" class="text-white"><i class="fa-regular fa-heart fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="fa-regular fa-user fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 3. Bottom White Nav (Categories & Links & Phone) -->
+        <nav class="bottom-nav py-2 border-bottom shadow-sm">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-4">
+                    <!-- Category Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn category-btn dropdown-toggle d-flex align-items-center gap-2" type="button"
+                            data-bs-toggle="dropdown">
+                            All Category
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#">Computers</a></li>
+                            <li><a class="dropdown-item" href="#">Smartphones</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="menu-links d-flex align-items-center gap-3">
+                        <a href="#"><i class="fa-solid fa-location-dot"></i> Track Order</a>
+                        <a href="#"><i class="fa-solid fa-code-compare"></i> Compare</a>
+                        <a href="#"><i class="fa-solid fa-headset"></i> Customer Support</a>
+                        <a href="#"><i class="fa-regular fa-circle-question"></i> Need Help</a>
+                    </div>
+                </div>
+
+                <!-- Phone Contact -->
+                <div class="phone-contact d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone-volume text-warning"></i> +1-202-555-0104
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section py-4">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Main Slider -->
+                <div class="col-lg-8">
+                    <div id="heroCarousel"
+                        class="carousel slide h-100 hero-card rounded-3 overflow-hidden position-relative"
+                        data-bs-ride="carousel">
+
+                        <div class="carousel-indicators justify-content-start ms-4 mb-3">
+                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true"></button>
+                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                        </div>
+
+                        <div class="carousel-inner h-100">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active h-100">
+                                <div class="d-flex align-items-center justify-content-between p-4 p-md-5 h-100">
+                                    <div class="hero-content">
+                                        <span class="sub-title d-block mb-2">
+                                            <span class="line me-2"></span>THE BEST PLACE TO PLAY
+                                        </span>
+                                        <h1 class="hero-title mb-3">Xbox Consoles</h1>
+                                        <p class="hero-text text-muted mb-4">Save up to 50% on select Xbox games. Get 3
+                                            months of PC Game Pass for $2 USD.</p>
+                                        <a href="#products"
+                                            class="btn btn-orange text-white fw-bold px-4 py-2 text-uppercase d-inline-flex align-items-center gap-2">
+                                            Shop Now <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="hero-img-wrapper position-relative">
+                                        <span class="price-badge">$299</span>
+                                        <img src="https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad,format=webp,quality=70/images/000000000001057749_1?1703591805"
+                                            alt="Xbox Console" class="img-fluid">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Side Widgets -->
+                <div class="col-lg-4 d-flex flex-column gap-3">
+
+                    <!-- Top Widget -->
+                    <div
+                        class="widget-side-card bg-dark text-white rounded-3 p-4 flex-fill position-relative overflow-hidden">
+                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 fw-bold">29%
+                            OFF</span>
+                        <div class="w-60">
+                            <small class="text-warning text-uppercase fw-bold">SUMMER SALES</small>
+                            <h5 class="fw-bold my-2">New Google Pixel 6 Pro</h5>
+                            <a href="#products"
+                                class="btn btn-orange btn-sm text-white fw-bold mt-2 text-uppercase">Shop Now <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <img src="https://becextech.com.au/media/catalog/product/cache/87bf6cc783e51bde4c0e5a7b582a0719/N/B/NBXTGPix6ProAnyCol_1_1.jpg"
+                            class="widget-side-img" alt="Pixel 6 Pro">
+                    </div>
+
+                    <!-- Bottom Widget -->
+                    <div
+                        class="widget-side-card bg-light rounded-3 p-4 flex-fill position-relative overflow-hidden border">
+                        <div class="w-60">
+                            <h5 class="fw-bold mb-1">Xiaomi FlipBuds Pro</h5>
+                            <p class="text-primary fw-bold mb-2">$299 USD</p>
+                            <a href="#products" class="btn btn-orange btn-sm text-white fw-bold text-uppercase">Shop Now
+                                <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <img src="https://files.easy-orders.net/1709750629052661837.webp" class="widget-side-img"
+                            alt="FlipBuds">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="features-bar mt-4 bg-white border rounded-3 p-3">
+                <div class="row g-0 align-items-center">
+
+                    <div class="col-md-3 col-6 feature-item p-2 d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-box-archive fs-2 text-dark"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0 text-uppercase fs-7">Fasted Delivery</h6>
+                            <small class="text-muted fs-8">Delivery in 24/H</small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 feature-item p-2 d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-trophy fs-2 text-dark"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0 text-uppercase fs-7">24 Hours Return</h6>
+                            <small class="text-muted fs-8">100% money-back guarantee</small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 feature-item p-2 d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-credit-card fs-2 text-dark"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0 text-uppercase fs-7">Secure Payment</h6>
+                            <small class="text-muted fs-8">Your money is safe</small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 feature-item p-2 d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-headset fs-2 text-dark"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0 text-uppercase fs-7">Support 24/7</h6>
+                            <small class="text-muted fs-8">Live contact/message</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- ================= TODAY BEST DEALS SECTION ================= -->
+    <section class="best-deals-section py-5">
+        <div class="container">
+
+            <!-- Header & Countdown Timer -->
+            <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+                    <h3 class="fw-bold mb-0 text-dark fs-4">Best Deals</h3>
+                    <div class="deals-timer d-flex align-items-center gap-2">
+                        <span class="timer-label">Deals ends in</span>
+                        <div class="timer-box d-flex align-items-center gap-1">
+                            <span id="days">16d</span> :
+                            <span id="hours">21h</span> :
+                            <span id="minutes">57m</span> :
+                            <span id="seconds">23s</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="browse-link fw-semibold">
+                    Browse All Product <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    let totalSeconds = (16 * 86400) + (21 * 3600) + (57 * 60) + 23;
+
+                    function updateTimer() {
+                        const daysEl = document.getElementById('days');
+                        const hoursEl = document.getElementById('hours');
+                        const minutesEl = document.getElementById('minutes');
+                        const secondsEl = document.getElementById('seconds');
+
+                        if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+                        if (totalSeconds <= 0) {
+                            clearInterval(timerInterval);
+                            return;
+                        }
+
+                        const d = Math.floor(totalSeconds / (3600 * 24));
+                        const h = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+                        const m = Math.floor((totalSeconds % 3600) / 60);
+                        const s = Math.floor(totalSeconds % 60);
+
+                        daysEl.textContent = `${d}d`;
+                        hoursEl.textContent = `${h < 10 ? '0' + h : h}h`;
+                        minutesEl.textContent = `${m < 10 ? '0' + m : m}m`;
+                        secondsEl.textContent = `${s < 10 ? '0' + s : s}s`;
+
+                        totalSeconds--;
+                    }
+
+                    updateTimer();
+                    const timerInterval = setInterval(updateTimer, 1000);
+                });
+            </script>
+            <!-- Products Grid Container -->
+            <div class="row g-3">
+
+                <!-- 1. Main Large Deal Card (Xbox) -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="product-card featured-card h-100 p-4 border rounded bg-white position-relative d-flex flex-column justify-content-between">
+
+                        <!-- Badges -->
+                        <div class="badges-wrapper d-flex flex-column gap-1 position-absolute top-0 start-0 m-3 z-2">
+                            <span class="badge bg-warning text-dark fw-bold">32% OFF</span>
+                            <span class="badge bg-danger text-white fw-bold">HOT</span>
+                        </div>
+
+                        <!-- Image & Hover Overlay -->
+                        <div
+                            class="product-img-box position-relative text-center my-3 flex-grow-1 d-flex align-items-center justify-content-center">
+                            <img src="https://m.media-amazon.com/images/I/619BkvKW35L._AC_SL1500_.jpg" alt="Xbox"
+                                class="img-fluid main-deal-img">
+
+                            <div
+                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                                <button class="action-btn btn-orange" title="Add to Cart"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                                <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="product-info mt-2">
+                            <div class="text-warning fs-7 mb-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                                <span class="text-muted ms-1 fs-8">(52,677)</span>
+                            </div>
+                            <h5 class="fw-bold fs-6 mb-2">
+                                <a href="#" class="text-dark">Xbox Series S - 512GB SSD Console with Wireless Controller
+                                    - EU Version</a>
+                            </h5>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="text-muted text-decoration-line-through fs-7">$865.99</span>
+                                <span class="text-primary fw-bold fs-5">$442.12</span>
+                            </div>
+                            <p class="text-muted fs-8 mb-3">Games built using the Xbox Series X|S development kit
+                                showcase load times and visuals.</p>
+
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="btn btn-light border btn-icon-square"><i
+                                        class="fa-regular fa-heart"></i></button>
+                                <button
+                                    class="btn btn-orange text-white fw-bold flex-grow-1 py-2 fs-7 d-flex align-items-center justify-content-center gap-2">
+                                    <i class="fa-solid fa-cart-shopping"></i> ADD TO CART
+                                </button>
+                                <button class="btn btn-light border btn-icon-square"><i
+                                        class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 2. Small Products Grid (8 Items) -->
+                <div class="col-lg-8 col-md-6">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+
+                        <!-- Item 1 -->
+                        <div class="col">
+                            <div
+                                class="product-card p-3 border rounded bg-white position-relative h-100 d-flex flex-column justify-content-between">
+                                <span class="badge bg-secondary position-absolute top-0 start-0 m-2 z-2 fs-9">SOLD
+                                    OUT</span>
+                                <div class="product-img-box position-relative text-center py-2">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzQf73PywNQIsUjGvaxeA1orW--Ug94Vk6qwyAC_I2bA&s=10"
+                                        class="img-fluid small-img" alt="Bose">
+                                    <div
+                                        class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-btn btn-orange"><i
+                                                class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <h6 class="fs-8 fw-semibold mb-2"><a href="#" class="text-dark">Bose Sport Earbuds -
+                                            Wireless Earphones...</a></h6>
+                                    <span class="text-primary fw-bold fs-7">$2,300</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="col">
+                            <div
+                                class="product-card p-3 border rounded bg-white position-relative h-100 d-flex flex-column justify-content-between">
+                                <div class="product-img-box position-relative text-center py-2">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3AQ65edNfunt4Z2hkgDNSyk1Tu5Q8pN9x5tWvE0EX14TmfDnPJXlDffU&s=10"
+                                        class="img-fluid small-img" alt="Mobile">
+                                    <div
+                                        class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-btn btn-orange"><i
+                                                class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <h6 class="fs-8 fw-semibold mb-2"><a href="#" class="text-dark">Simple Mobile 4G LTE
+                                            Prepaid Smartphone</a></h6>
+                                    <span class="text-primary fw-bold fs-7">$220</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="col">
+                            <div
+                                class="product-card p-3 border rounded bg-white position-relative h-100 d-flex flex-column justify-content-between">
+                                <span
+                                    class="badge bg-warning text-dark position-absolute top-0 start-0 m-2 z-2 fs-9">19%
+                                    OFF</span>
+                                <div class="product-img-box position-relative text-center py-2">
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/71ZfLSxip-L._UL500_.jpg"
+                                        class="img-fluid small-img" alt="TV">
+                                    <div
+                                        class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-btn btn-orange"><i
+                                                class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <h6 class="fs-8 fw-semibold mb-2"><a href="#" class="text-dark">4K UHD LED Smart TV
+                                            with Chromecast</a></h6>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="text-muted text-decoration-line-through fs-8">$865</span>
+                                        <span class="text-primary fw-bold fs-7">$1,50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 (Sony Camera - Demonstration) -->
+                        <div class="col">
+                            <div
+                                class="product-card p-3 border rounded bg-white position-relative h-100 d-flex flex-column justify-content-between">
+                                <div class="product-img-box position-relative text-center py-2">
+                                    <img src=https://images.crutchfieldonline.com/ImageHandler/trim/869/652/products/2013/9/158/g158HX300K-o_outdoorrear.jpg""
+                                        class="img-fluid small-img" alt="Camera">
+                                    <div
+                                        class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-btn btn-orange"><i
+                                                class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <h6 class="fs-8 fw-semibold mb-2"><a href="#" class="text-dark">Sony DSCHX8 High
+                                            Zoom Point Camera</a></h6>
+                                    <span class="text-primary fw-bold fs-7">$1,200</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="col">
+                            <div
+                                class="product-card p-3 border rounded bg-white position-relative h-100 d-flex flex-column justify-content-between">
+                                <div class="product-img-box position-relative text-center py-2">
+                                    <img src="https://cdn.cs.1worldsync.com/4e/0b/4e0b8a3b-57e9-49d5-ac3e-a8b4aefaa2de.jpg"
+                                        class="img-fluid small-img" alt="Dell">
+                                    <div
+                                        class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-btn btn-orange"><i
+                                                class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <h6 class="fs-8 fw-semibold mb-2"><a href="#" class="text-dark">Dell Optiplex
+                                            All-in-One Monitor</a></h6>
+                                    <span class="text-primary fw-bold fs-7">$299</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="col">
+                            <div
+                                class="product-card p-3 border rounded bg-white position-relative h-100 d-flex flex-column justify-content-between">
+                                <div class="product-img-box position-relative text-center py-2">
+                                    <img src="https://img4.dhresource.com/webp/m/f3/albu/km/z/24/9d407946-cbab-4b26-b594-0ba8ad7c6452.jpg"
+                                        class="img-fluid small-img" alt="Drone">
+                                    <div
+                                        class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-btn btn-orange"><i
+                                                class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <h6 class="fs-8 fw-semibold mb-2"><a href="#" class="text-dark">Portable Washing
+                                            Machine 11lbs</a></h6>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="text-muted text-decoration-line-through fs-8">$865.00</span>
+                                        <span class="text-primary fw-bold fs-7">$70</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 7 -->
+                        <div class="col">
+                            <div
+                                class="product-card p-3 border rounded bg-white position-relative h-100 d-flex flex-column justify-content-between">
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-2 z-2 fs-9">HOT</span>
+                                <div class="product-img-box position-relative text-center py-2">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu1BemrEToGwpAuRGCrTOw9LWeXN8qhKD70Eu1O7gFSg&s=10"
+                                        class="img-fluid small-img" alt="Carburetor">
+                                    <div
+                                        class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-btn btn-orange"><i
+                                                class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <h6 class="fs-8 fw-semibold mb-2"><a href="#" class="text-dark">2-Barrel Carburetor
+                                            Carb 2100 Engine</a></h6>
+                                    <span class="text-primary fw-bold fs-7">$160</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 8 -->
+                        <div class="col">
+                            <div
+                                class="product-card p-3 border rounded bg-white position-relative h-100 d-flex flex-column justify-content-between">
+                                <span
+                                    class="badge bg-warning text-dark position-absolute top-0 start-0 m-2 z-2 fs-9">32%
+                                    OFF</span>
+                                <div class="product-img-box position-relative text-center py-2">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhi2fyON7OfDSDi11KAvKZMPwBbz2lEDHdDHxCeuOKNDgLQKidrT6q1g&s=10"
+                                        class="img-fluid small-img" alt="JBL">
+                                    <div
+                                        class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                        <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-btn btn-orange"><i
+                                                class="fa-solid fa-cart-shopping"></i></button>
+                                        <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <h6 class="fs-8 fw-semibold mb-2"><a href="#" class="text-dark">JBL FLIP
+                                            4-Waterproof Speaker</a></h6>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="text-muted text-decoration-line-through fs-8">$360</span>
+                                        <span class="text-primary fw-bold fs-7">$250</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ================= SHOP WITH CATEGORIES (AUTO SLIDER) ================= -->
+    <section class="shop-categories-section py-5 bg-white">
+        <div class="container overflow-hidden">
+
+            <div class="text-center mb-4">
+                <h3 class="fw-bold text-dark fs-3">Shop with Categories</h3>
+            </div>
+
+            <div class="category-marquee">
+                <div class="category-track">
+
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://techterms.com/img/xl/laptop_586.png" alt="Computer" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">Computer & Laptop</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://smartbuy-me.com/cdn/shop/files/ABJ1401ST0049.jpg?v=1759585497"
+                            alt="SmartPhone" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">SmartPhone</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHdmjSlSRLLRKfLzg0r9d6Vx_V5m64fgJT-nbcH4xL27H8EfWcSmxSa_4&s=10"
+                            alt="Headphones" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">Headphones</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNA1u-OzW1E5eLGOHaOs0qYISOxNJ8I74kEyRvhfJhZg&s=10"
+                            alt="Accessories" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">Accessories</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjz7HLeHcCH1bgKUiVEC2OdFCpng3tqY3dLBtnmYArdYmFMJETNMQWHsZo&s=10"
+                            alt="Camera" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">Camera & Photo</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://www.androidsis.com/wp-content/uploads/2024/08/google-tv.jpg" alt="TV"
+                            class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">TV & Homes</span>
+                    </a>
+
+                    <!-- تكرار نفس المجموعة لضمان استمرار الحركة بدون فراغ -->
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://techterms.com/img/xl/laptop_586.png" alt="Computer" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">Computer & Laptop</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://smartbuy-me.com/cdn/shop/files/ABJ1401ST0049.jpg?v=1759585497"
+                            alt="SmartPhone" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">SmartPhone</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHdmjSlSRLLRKfLzg0r9d6Vx_V5m64fgJT-nbcH4xL27H8EfWcSmxSa_4&s=10"
+                            alt="Headphones" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">Headphones</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNA1u-OzW1E5eLGOHaOs0qYISOxNJ8I74kEyRvhfJhZg&s=10"
+                            alt="Accessories" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">Accessories</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjz7HLeHcCH1bgKUiVEC2OdFCpng3tqY3dLBtnmYArdYmFMJETNMQWHsZo&s=10"
+                            alt="Camera" class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">Camera & Photo</span>
+                    </a>
+                    <a href="#" class="category-card border rounded p-3 text-center text-decoration-none">
+                        <img src="https://www.androidsis.com/wp-content/uploads/2024/08/google-tv.jpg" alt="TV"
+                            class="category-img">
+                        <span class="category-name fw-semibold text-dark fs-7 mt-2 d-block">TV & Homes</span>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ================= FEATURED PRODUCTS SECTION ================= -->
+    <section id="products" class="featured-products-section py-5 bg-white">
+    </section>
+    <section class="featured-products-section py-5 bg-white">
+        <div class="container-fluid px-lg-5">
+
+            <!-- Section Header with Tabs -->
+            <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
+                <h3 class="fw-bold text-dark fs-4 mb-0">Featured Products</h3>
+
+                <div class="d-flex align-items-center gap-4 flex-wrap">
+                    <ul class="nav nav-tabs featured-tabs border-0" id="featuredTabs" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-all">All
+                                Product</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-phone">Smart
+                                Phone</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-laptop">Laptop</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab"
+                                data-bs-target="#tab-headphone">Headphone</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-tv">TV</button>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="browse-link text-primary fw-semibold fs-7 text-decoration-none">
+                        Browse All Product <i class="fa-solid fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-3">
+
+                <!-- 1. Left Large Promo Banner -->
+                <div class="col-xl-3 col-lg-4 col-md-5">
+                    <div
+                        class="promo-banner-large p-4 rounded d-flex flex-column justify-content-between h-100 position-relative overflow-hidden">
+                        <div class="text-center z-1">
+                            <span class="text-uppercase fw-bold text-dark fs-8 tracking-wide d-block mb-2">COMPUTER &
+                                ACCESSORIES</span>
+                            <h2 class="fw-bold text-dark display-6 mb-2">32% Discount</h2>
+                            <p class="text-secondary fs-7 mb-3">For all electronics products</p>
+
+                            <div
+                                class="banner-offer-tag bg-warning fw-bold text-dark px-2 py-1 rounded d-inline-block fs-8 mb-4">
+                                Offers ends in: <span class="bg-white px-2 py-1 rounded text-dark ms-1 fs-9">ENDS OF
+                                    CHRISTMAS</span>
+                            </div>
+
+                            <div>
+                                <a href="#products"
+                                    class="btn btn-warning btn-orange text-white fw-bold px-4 py-2 fs-7 text-uppercase border-0">
+                                    SHOP NOW <i class="fa-solid fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Background Image for Banner -->
+                        <div class="banner-bg-img mt-4 text-center">
+                            <img src="https://www.shutterstock.com/image-photo/composition-various-modern-devices-on-260nw-2577627707.jpg"
+                                alt="Accessories" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Products Grid (8 Items - 2 Rows x 4 Columns) -->
+                <div class="col-xl-9 col-lg-8 col-md-7">
+                    <div class="tab-content" id="featuredTabsContent">
+
+                        <!-- All Products Tab (8 Products) -->
+                        <div class="tab-pane fade show active" id="tab-all">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-4 g-3">
+
+                                <!-- Product 1 (HOT) -->
+                                <div class="col">
+                                    <div
+                                        class="product-card p-3 border rounded bg-white position-relative d-flex flex-column justify-content-between h-100">
+                                        <span
+                                            class="badge bg-danger position-absolute top-0 start-0 m-2 z-2 fs-9">HOT</span>
+                                        <div class="product-img-box position-relative text-center py-2">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfwyCV-671VWJEYw5I6R1unBxDmYetr8Qs_vretimIgQ&s=10"
+                                                class="img-fluid product-img" alt="Earbuds">
+
+                                            <!-- Overlay Action Buttons -->
+                                            <div
+                                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                                <button class="action-btn" title="Wishlist"><i
+                                                        class="fa-regular fa-heart"></i></button>
+                                                <button class="action-btn btn-cart" title="Add to Cart"><i
+                                                        class="fa-solid fa-cart-shopping"></i></button>
+                                                <button class="action-btn" title="Quick View"><i
+                                                        class="fa-regular fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="ratings text-warning fs-9 mb-1">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-muted ms-1">(738)</span>
+                                            </div>
+                                            <h6 class="fs-8 fw-normal text-truncate-2 mb-2"><a href="#"
+                                                    class="text-dark text-decoration-none">TOZO T6 True Wireless Earbuds
+                                                    Bluetooth Headphon...</a></h6>
+                                            <div class="price-box"><span class="text-primary fw-bold fs-7">$70</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 2 -->
+                                <div class="col">
+                                    <div
+                                        class="product-card p-3 border rounded bg-white position-relative d-flex flex-column justify-content-between h-100">
+                                        <div class="product-img-box position-relative text-center py-2">
+                                            <img src="https://images.samsung.com/is/image/samsung/p6pim/eg/s2602/gallery/eg-galaxy-s26-ultra-s948-sm-s948bzvpmea-thumb-550916516"
+                                                class="img-fluid product-img" alt="Samsung">
+                                            <div
+                                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                                <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                                <button class="action-btn btn-cart"><i
+                                                        class="fa-solid fa-cart-shopping"></i></button>
+                                                <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="ratings text-warning fs-9 mb-1">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-muted ms-1">(536)</span>
+                                            </div>
+                                            <h6 class="fs-8 fw-normal text-truncate-2 mb-2"><a href="#"
+                                                    class="text-dark text-decoration-none">Samsung Electronics Samsung
+                                                    Galaxy S21 5G</a></h6>
+                                            <div class="price-box"><span class="text-primary fw-bold fs-7">$2,300</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 3 (BEST DEALS) -->
+                                <div class="col">
+                                    <div
+                                        class="product-card p-3 border rounded bg-white position-relative d-flex flex-column justify-content-between h-100">
+                                        <span class="badge bg-primary position-absolute top-0 start-0 m-2 z-2 fs-9">BEST
+                                            DEALS</span>
+                                        <div class="product-img-box position-relative text-center py-2">
+                                            <img src="https://m.media-amazon.com/images/I/81EvnxnIAWL._AC_UF894,1000_QL80_.jpg"
+                                                class="img-fluid product-img" alt="AC">
+                                            <div
+                                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                                <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                                <button class="action-btn btn-cart"><i
+                                                        class="fa-solid fa-cart-shopping"></i></button>
+                                                <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="ratings text-warning fs-9 mb-1">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-muted ms-1">(423)</span>
+                                            </div>
+                                            <h6 class="fs-8 fw-normal text-truncate-2 mb-2"><a href="#"
+                                                    class="text-dark text-decoration-none">Amazon Basics High-Speed HDMI
+                                                    Cable (18 Gbps, 4K/6...</a></h6>
+                                            <div class="price-box"><span class="text-primary fw-bold fs-7">$360</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 4 -->
+                                <div class="col">
+                                    <div
+                                        class="product-card p-3 border rounded bg-white position-relative d-flex flex-column justify-content-between h-100">
+                                        <div class="product-img-box position-relative text-center py-2">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHTifCxUQxCukHOB-DK5rotYCS1zDgTPUHkDQA946-jw&s"
+                                                class="img-fluid product-img" alt="Headphone">
+                                            <div
+                                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                                <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                                <button class="action-btn btn-cart"><i
+                                                        class="fa-solid fa-cart-shopping"></i></button>
+                                                <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="ratings text-warning fs-9 mb-1">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-muted ms-1">(816)</span>
+                                            </div>
+                                            <h6 class="fs-8 fw-normal text-truncate-2 mb-2"><a href="#"
+                                                    class="text-dark text-decoration-none">Portable Washing Machine,
+                                                    11lbs capacity Model 18NMF...</a></h6>
+                                            <div class="price-box"><span class="text-primary fw-bold fs-7">$80</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 5 -->
+                                <div class="col">
+                                    <div
+                                        class="product-card p-3 border rounded bg-white position-relative d-flex flex-column justify-content-between h-100">
+                                        <div class="product-img-box position-relative text-center py-2">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd2FdQBhu20oS4uwrf8A9SFBBJht4GLC9MHoWyh6qTPQ&s=10"
+                                                class="img-fluid product-img" alt="Drone">
+                                            <div
+                                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                                <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                                <button class="action-btn btn-cart"><i
+                                                        class="fa-solid fa-cart-shopping"></i></button>
+                                                <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="ratings text-warning fs-9 mb-1">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-muted ms-1">(647)</span>
+                                            </div>
+                                            <h6 class="fs-8 fw-normal text-truncate-2 mb-2"><a href="#"
+                                                    class="text-dark text-decoration-none">Wired Over-Ear Gaming
+                                                    Headphones with USB</a></h6>
+                                            <div class="price-box"><span class="text-primary fw-bold fs-7">$1,500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 6 (25% OFF) -->
+                                <div class="col">
+                                    <div
+                                        class="product-card p-3 border rounded bg-white position-relative d-flex flex-column justify-content-between h-100">
+                                        <span
+                                            class="badge bg-warning text-dark position-absolute top-0 start-0 m-2 z-2 fs-9">25%
+                                            OFF</span>
+                                        <div class="product-img-box position-relative text-center py-2">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv1-3FDGz0GWMS5Uf1TGLfd9c0BEYXlLxwxtn81a89_w&s=10"
+                                                class="img-fluid product-img" alt="TV">
+                                            <div
+                                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                                <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                                <button class="action-btn btn-cart"><i
+                                                        class="fa-solid fa-cart-shopping"></i></button>
+                                                <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="ratings text-warning fs-9 mb-1">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-muted ms-1">(877)</span>
+                                            </div>
+                                            <h6 class="fs-8 fw-normal text-truncate-2 mb-2"><a href="#"
+                                                    class="text-dark text-decoration-none">Polaroid 57-Inch Photo/Video
+                                                    Tripod with Deluxe Tripod Ca...</a></h6>
+                                            <div class="price-box"><span
+                                                    class="text-muted text-decoration-line-through me-1 fs-8">$1600</span><span
+                                                    class="text-primary fw-bold fs-7">$1,200</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 7 -->
+                                <div class="col">
+                                    <div
+                                        class="product-card p-3 border rounded bg-white position-relative d-flex flex-column justify-content-between h-100">
+                                        <div class="product-img-box position-relative text-center py-2">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpze-8pQ9UCSmWllPEMRJ0NcfgBrCXPIVb8aXlk-blCvPMUvIzThkVpfs&s=10"
+                                                class="img-fluid product-img" alt="Monitor">
+                                            <div
+                                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                                <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                                <button class="action-btn btn-cart"><i
+                                                        class="fa-solid fa-cart-shopping"></i></button>
+                                                <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="ratings text-warning fs-9 mb-1">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-muted ms-1">(426)</span>
+                                            </div>
+                                            <h6 class="fs-8 fw-normal text-truncate-2 mb-2"><a href="#"
+                                                    class="text-dark text-decoration-none">Dell Optiplex 7000x7480
+                                                    All-in-One Computer Monitor</a></h6>
+                                            <div class="price-box"><span class="text-primary fw-bold fs-7">$250</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product 8 (SALE) -->
+                                <div class="col">
+                                    <div
+                                        class="product-card p-3 border rounded bg-white position-relative d-flex flex-column justify-content-between h-100">
+                                        <span
+                                            class="badge bg-success position-absolute top-0 start-0 m-2 z-2 fs-9">SALE</span>
+                                        <div class="product-img-box position-relative text-center py-2">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsrA34_hrmPGxs6j41giJm5YYqzOwDOfga9UfxXhE9emIhCOndf5PaLls&s=10"
+                                                class="img-fluid product-img" alt="Phone">
+                                            <div
+                                                class="product-overlay position-absolute w-100 h-100 top-0 start-0 d-flex align-items-center justify-content-center gap-2">
+                                                <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                                                <button class="action-btn btn-cart"><i
+                                                        class="fa-solid fa-cart-shopping"></i></button>
+                                                <button class="action-btn"><i class="fa-regular fa-eye"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="ratings text-warning fs-9 mb-1">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                                <span class="text-muted ms-1">(583)</span>
+                                            </div>
+                                            <h6 class="fs-8 fw-normal text-truncate-2 mb-2"><a href="#"
+                                                    class="text-dark text-decoration-none">4K UHD LED Smart TV with
+                                                    Chromecast Built-in</a></h6>
+                                            <div class="price-box"><span class="text-primary fw-bold fs-7">$220</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab-tv">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ================= DUAL BANNERS SECTION ================= -->
+    <section class="double-banners-section py-4">
+        <div class="container-fluid px-lg-5">
+            <div class="row g-4">
+
+                <!-- Left Banner: Apple Homepod Mini -->
+                <div class="col-lg-6">
+                    <div
+                        class="banner-box banner-light p-4 p-md-5 rounded d-flex align-items-center justify-content-between position-relative overflow-hidden h-100">
+                        <div class="banner-content z-1 pe-3">
+                            <span
+                                class="badge bg-info text-white text-uppercase px-2 py-1 fs-9 mb-2 fw-semibold">INTRODUCING</span>
+                            <h3 class="fw-bold text-dark fs-2 mb-2">New Apple<br>Homepod Mini</h3>
+                            <p class="text-secondary fs-7 mb-4">Jam-packed with innovation,<br>HomePod mini delivers
+                                unexpectedly.</p>
+                            <a href="#products"
+                                class="btn btn-orange text-white fw-bold px-4 py-2 fs-7 text-uppercase border-0">
+                                SHOP NOW <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                        <div class="banner-img-wrap">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTceDPunrWV8QHOVKO7pnfdlfgnE8pHZZmIwbKsEvmzFQ&s=10"
+                                alt="Apple Homepod Mini" class="img-fluid banner-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Banner: Xiaomi Mi 11 Ultra -->
+                <div class="col-lg-6">
+                    <div
+                        class="banner-box banner-dark p-4 p-md-5 rounded d-flex align-items-center justify-content-between position-relative overflow-hidden h-100">
+
+                        <!-- Price Tag Circle -->
+                        <div
+                            class="price-circle-badge position-absolute bg-info text-white fw-bold d-flex align-items-center justify-content-center">
+                            $590
+                        </div>
+
+                        <div class="banner-content z-1 pe-3">
+                            <span
+                                class="badge bg-warning text-dark text-uppercase px-2 py-1 fs-9 mb-2 fw-bold">INTRODUCING
+                                NEW</span>
+                            <h3 class="fw-bold text-white fs-2 mb-2">Xiaomi Mi 11 Ultra<br>12GB+256GB</h3>
+                            <p class="text-muted fs-9 mb-4">*Data provided by internal<br>laboratories. Industry
+                                measurment.</p>
+                            <a href="#products"
+                                class="btn btn-orange text-white fw-bold px-4 py-2 fs-7 text-uppercase border-0">
+                                SHOP NOW <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+
+                        <div class="banner-img-wrap">
+                            <img src="https://cdn.kalvo.com/uploads/img/gallery/xiaomi-mi-11-ultra-1.jpg"
+                                alt="Xiaomi Phone" class="img-fluid banner-img">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="computer-accessories container">
+        <!-- Header Section -->
+        <div class="section-header">
+            <h2 class="section-title">Computer Accessories</h2>
+
+            <div class="tabs-and-link">
+                <ul class="category-tabs">
+                    <li class="tab-item active" data-category="all">All Product</li>
+                    <li class="tab-item" data-category="keyboard-mouse">Keyboard & Mouse</li>
+                    <li class="tab-item" data-category="headphone">Headphone</li>
+                    <li class="tab-item" data-category="webcam">Webcam</li>
+                    <li class="tab-item" data-category="printer">Printer</li>
+                </ul>
+                <a href="#" class="browse-all-link">Browse All Product &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Content Body (Products Grid + Side Banners) -->
+        <div class="section-body">
+
+            <!-- Products Grid (4 columns) -->
+            <div class="products-grid">
+
+                <!-- Card 1 -->
+                <div class="product-card" data-category="headphone">
+                    <span class="badge best-deals">BEST DEALS</span>
+                    <div class="product-img">
+                        <img src="https://m.media-amazon.com/images/I/71jIrgXTi5L.jpg" alt="Headphone">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="count">(994)</span>
+                        </div>
+                        <h3 class="product-name">Amazon Basics High-Speed Headphones</h3>
+                        <div class="price">$360</div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card" data-category="headphone">
+                    <div class="product-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKJirZNgYxPmDLyMBtBHZbfQTqwR-krYMmfD6-7Xt2Zg&s=10"
+                            alt="Headphones">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="count">(798)</span>
+                        </div>
+                        <h3 class="product-name">Portable Wireless Over-Ear Headphones</h3>
+                        <div class="price">$80</div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card" data-category="keyboard-mouse">
+                    <span class="badge hot">HOT</span>
+                    <div class="product-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKbCxyLZA7m07zhjl7MK8WybuYHwwv3Yf5wc8gTS1WzDF8uri-hR2F1iU&s=10"
+                            alt="Keyboard">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="count">(600)</span>
+                        </div>
+                        <h3 class="product-name">TOZO T6 True Wireless Earbuds & Keyboard</h3>
+                        <div class="price">$70</div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card" data-category="printer">
+                    <div class="product-img">
+                        <img src="https://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/dell-client-products/desktops/optiplex-desktops/7760-aio/spi/ng/desktop-optiplex-7760-aio-relsize-ss-mtrc-500-de-at-ng.psd?fmt=png-alpha"
+                            alt="Printer">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="count">(492)</span>
+                        </div>
+                        <h3 class="product-name">Dell Optiplex All-In-One Printer</h3>
+                        <div class="price">$250</div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-card" data-category="webcam">
+                    <div class="product-img">
+                        <img src=https://f.nooncdn.com/p/pzsku/ZDA45802BF4D1B1EF4377Z/45/_/1779727668/2e1740a3-08f1-4d02-a3f0-02b4caf4812c.jpg?width=320""
+                            alt="Webcam">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="count">(740)</span>
+                        </div>
+                        <h3 class="product-name">Samsung Security Smart Camera</h3>
+                        <div class="price">$2,300</div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="product-card" data-category="webcam">
+                    <span class="badge sale">SALE</span>
+                    <div class="product-img">
+                        <img src="https://sc04.alicdn.com/kf/H03e433902a1247e5af27b9d5b36bd3f2j.jpg" alt="Webcam">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="count">(556)</span>
+                        </div>
+                        <h3 class="product-name">4K UHD LED Smart TV / Cam Built-in</h3>
+                        <div class="price">$220</div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="product-card" data-category="headphone">
+                    <div class="product-img">
+                        <img src="https://f.nooncdn.com/p/pzsku/ZF80860BB0FB917257B77Z/45/1757842980/96c7e6c0-bf9c-4e0d-af20-1a47dd61adac.jpg?width=1200"
+                            alt="Headphones">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="count">(536)</span>
+                        </div>
+                        <h3 class="product-name">Wired Over-Ear Gaming Headphones</h3>
+                        <div class="price">$1,500</div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="product-card" data-category="printer">
+                    <span class="badge off">25% OFF</span>
+                    <div class="product-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4RVYs6SeJ-_WOZoETC50bBv-wrxi1Rh-Xv8E5PiG4EA&s=10"
+                            alt="Printer">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="count">(423)</span>
+                        </div>
+                        <h3 class="product-name">Polaroid Photo / Video Tripod & Printer</h3>
+                        <div class="price"><span class="old-price">$1,600</span> $1,200</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Side Banners -->
+            <div class="side-banners">
+
+                <!-- Top Yellow Banner -->
+                <div class="banner yellow-banner">
+                    <img src="https://cdn.daraaksesuar.com/product-images/xiaomi-mi-true-wireless-earphones-resmi-distributor-garantili-acc437e5-8f5d.jpg"
+                        alt="Earbuds" class="banner-img">
+                    <h3>Xiaomi True Wireless Earbuds</h3>
+                    <p>Escape the noise, It's time to hear the magic with Xiaomi Earbuds.</p>
+                    <div class="banner-price">Only for: <span>$299 USD</span></div>
+                    <a href="#" class="btn btn-orange">SHOP NOW &rarr;</a>
+                </div>
+
+                <!-- Bottom Blue Banner -->
+                <div class="banner blue-banner">
+                    <span class="banner-sub">SUMMER SALES</span>
+                    <h3>37% DISCOUNT</h3>
+                    <p>only for <strong>SmartPhone</strong> product.</p>
+                    <a href="#" class="btn btn-blue">SHOP NOW &rarr;</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="large-promo-banner container">
+        <div class="promo-banner-content">
+
+            <!-- Left Text Area -->
+            <div class="promo-text-wrapper">
+                <span class="promo-badge">SAVE UP TO $200.00</span>
+                <h2 class="promo-title">Macbook Pro</h2>
+                <p class="promo-description">
+                    Apple M1 Max Chip. 32GB Unified Memory, 1TB SSD Storage
+                </p>
+                <a href="#" class="btn btn-shop-now">SHOP NOW &rarr;</a>
+            </div>
+
+            <!-- Right Image Area -->
+            <div class="promo-image-wrapper">
+                <div class="price-circle-tag">$1999</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoJJja1raHNdwaGzp3-LbPbPmrYIKTveRYEgx0zBdQ9wYIrMUfByrUHjIq&s=10"
+                    alt="Macbook Pro" class="macbook-img">
+            </div>
+
+        </div>
+    </section>
+    <section class="small-products-widget container">
+
+        <!-- Column 1: FLASH SALE TODAY -->
+        <div class="widget-column">
+            <h3 class="widget-title">FLASH SALE TODAY</h3>
+            <div class="widget-products-list">
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://ae-pic-a1.aliexpress-media.com/kf/Sa21551e144154e10bccedd360936647fp.jpg"
+                            alt="Bose Sport Earbuds">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71KGkQ+KOKL._AC_UL495_SR435,495_.jpg"
+                            alt="Simple Mobile 4G">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Simple Mobile 4G LTE Prepaid Smartphone</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71ZfLSxip-L._UL500_.jpg"
+                            alt="4K UHD LED Smart TV">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">4K UHD LED Smart TV with Chromecast Built-in</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Column 2: BEST SELLERS -->
+        <div class="widget-column">
+            <h3 class="widget-title">BEST SELLERS</h3>
+            <div class="widget-products-list">
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://zuricart.co.ke/_next/image?url=https%3A%2F%2Fcdn.zuricart.co.ke%2Fproduct%2Fsamsung-galaxy-s21-plus-5g.jpg&w=640&q=75"
+                            alt="Samsung Electronics">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Samsung Electronics Samsung Galaxy S21 5G</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://s.alicdn.com/@sc04/kf/Hd28549dd590f428ba9865306e843e4f6I.jpg_300x300.jpg"
+                            alt="Simple Mobile 5G">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Simple Mobile 5G LTE Galaxy 12 Mini 512GB Gaming Phone</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://m.media-amazon.com/images/I/9146xhx1LAL._CR3,0,1914,1080_SR684,386_.jpg"
+                            alt="Sony DSCHX8">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Sony DSCHX8 High Zoom Point & Shoot Camera</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Column 3: TOP RATED -->
+        <div class="widget-column">
+            <h3 class="widget-title">TOP RATED</h3>
+            <div class="widget-products-list">
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://m.media-amazon.com/images/I/71r6-i7TxGL.jpg" alt="Portable Washing Machine">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Portable Washing Machine, 11lbs capacity Model 18NMF...</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://www.adorama.com/alc/wp-content/uploads/2024/11/Gifts-for-sony-thumbnail.jpeg"
+                            alt="Sony DSCHX8">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Sony DSCHX8 High Zoom Point & Shoot Camera</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfDyF3kupZt5IW0f1SfhsxXN44r2kbP-2yFp3fr-VsltyH8lSwnRfL9n7u&s=10"
+                            alt="Dell Optiplex">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Dell Optiplex 7000x7480 All-in-One Computer Monitor</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Column 4: NEW ARRIVAL -->
+        <div class="widget-column">
+            <h3 class="widget-title">NEW ARRIVAL</h3>
+            <div class="widget-products-list">
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://www.tozostore.com/cdn/shop/files/t6mini-champagne-main07_1200x.webp?v=1765360636"
+                            alt="TOZO T6">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">TOZO T6 True Wireless Earbuds Bluetooth Headpho...</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5600e586/pdp/JBL_Flip4_Lifestyle_Image_3.png?sw=904&sh=560"
+                            alt="JBL FLIP 4">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">JBL FLIP 4-Waterproof Portable Bluetooth Speaker...</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-card">
+                    <div class="mini-product-img">
+                        <img src="https://m.media-amazon.com/images/I/71M4BnUwEsL._AC_UF350,350_QL80_.jpg"
+                            alt="Wyze Cam Pan">
+                    </div>
+                    <div class="mini-product-info">
+                        <h4 class="product-title">Wyze Cam Pan v2 1080p Pan/Tilt/Zoom Wi-Fi Indoor Smar...</h4>
+                        <span class="product-price">$1,500</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="latest-news-section">
+        <div class="container">
+
+            <section class="latest-news container">
+
+                <h2 class="section-title">Latest News</h2>
+
+                <div class="news-grid">
+
+                    <!-- Blog Card 1 -->
+                    <article class="blog-card">
+                        <div class="blog-image-container">
+                            <img src="https://mesrshop.com/wp-content/uploads/2024/08/165194_11zon.webp"
+                                alt="News Image 1" class="blog-img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="meta-item"><i class="far fa-user"></i> Kristin</span>
+                                <span class="meta-item"><i class="far fa-calendar"></i> 19Dec, 2013</span>
+                                <span class="meta-item"><i class="far fa-comment"></i> 453</span>
+                            </div>
+                            <h3 class="blog-title">
+                                Cras nisl dolor, accumsan et metus sit amet, vulputate condimentum dolor.
+                            </h3>
+                            <p class="blog-excerpt">
+                                Maecenas scelerisque, arcu quis tempus egestas, ligula diam molestie lectus, tincidunt
+                                malesuada arcu metus posuere metus.
+                            </p>
+                            <a href="#" class="btn-read-more">READ MORE &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="blog-card">
+                        <div class="blog-image-container">
+                            <img src="https://assets.rohde-schwarz.com/public/image/corporate/corporate-communication/press/embedded-world-key-visual-promotional-image-rohde-schwarz_200_120697_320_180_1.jpg"
+                                alt="News Image 2" class="blog-img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="meta-item"><i class="far fa-user"></i> Robert</span>
+                                <span class="meta-item"><i class="far fa-calendar"></i> 28 Nov, 2015</span>
+                                <span class="meta-item"><i class="far fa-comment"></i> 738</span>
+                            </div>
+                            <h3 class="blog-title">
+                                Curabitur pulvinar aliquam lectus, non blandit erat mattis vitae.
+                            </h3>
+                            <p class="blog-excerpt">
+                                Mauris scelerisque odio id rutrum volutpat. Pellentesque urna odio, vulputate at tortor
+                                vitae, hendrerit blandit lorem.
+                            </p>
+                            <a href="#" class="btn-read-more">READ MORE &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="blog-card">
+                        <div class="blog-image-container">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/015/057/small/woman-using-a-smartphone-on-the-table-free-video.jpg"
+                                alt="News Image 3" class="blog-img">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="meta-item"><i class="far fa-user"></i> Arlene</span>
+                                <span class="meta-item"><i class="far fa-calendar"></i> 9 May, 2014</span>
+                                <span class="meta-item"><i class="far fa-comment"></i> 826</span>
+                            </div>
+                            <h3 class="blog-title">
+                                Curabitur massa orci, consectetur et blandit ac, auctor et tellus.
+                            </h3>
+                            <p class="blog-excerpt">
+                                Pellentesque vestibulum lorem vel gravida aliquam. Morbi porta, odio id suscipit mattis,
+                                risus augue condimentum purus.
+                            </p>
+                            <a href="#" class="btn-read-more">READ MORE &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+    </section>
     <!-- ================= قسم النشرة البريدية ================= -->
     <section class="newsletter-section">
         <div class="container">
