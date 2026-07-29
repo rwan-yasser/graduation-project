@@ -62,17 +62,94 @@
                             <a href="#"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                         <span class="v-divider"></span>
-                        <div class="lang-curr-select d-flex gap-2">
-                            <select class="form-select form-select-sm border-0 bg-transparent text-white">
-                                <option value="eng" class="text-dark">Eng</option>
-                            </select>
-                            <select class="form-select form-select-sm border-0 bg-transparent text-white">
-                                <option value="usd" class="text-dark">USD</option>
-                            </select>
+
+                        <div class="d-flex align-items-center gap-3"></div>
+                        <!-- قائمة اختيار اللغة -->
+                        <div class="language-dropdown-container position-relative d-inline-block">
+                            <button id="lang-btn"
+                                class="btn btn-sm text-white bg-transparent border-0 d-flex align-items-center gap-1"
+                                type="button">
+                                <img id="current-lang-flag" src="assets/images/home/US-flag.jpg" alt="US" width="20"
+                                    height="15">
+                                <span id="current-lang-text">Eng</span>
+                                <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i>
+                            </button>
+
+                            <ul id="lang-list"
+                                class="d-none position-absolute bg-white shadow rounded py-2 list-unstyled mx-4"
+                                style="top: 100%; right: 0; min-width: 160px; z-index: 1050;">
+
+                                <!-- لغة الإنجليزية -->
+                                <li class="lang-option px-3 py-2 d-flex justify-content-between align-items-center bg-light text-dark fw-bold"
+                                    data-lang="Eng" data-flag="assets/images/home/US-flag.jpg" style="cursor: pointer;">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <img src="assets/images/home/US-flag.jpg" alt="English" width="20" height="15">
+                                        English
+                                    </span>
+                                    <i class="fa-solid fa-check text-warning check-icon"></i>
+                                </li>
+
+                                <!-- لغة الماندرين -->
+                                <li class="lang-option px-3 py-2 d-flex justify-content-between align-items-center text-secondary"
+                                    data-lang="Mandarin" data-flag="assets/images/home/china-Flag.AVIF"
+                                    style="cursor: pointer;">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <img src="assets/images/home/china-Flag.AVIF" alt="Mandarin" width="20"
+                                            height="15">
+                                        Mandarin
+                                    </span>
+                                    <i class="fa-solid fa-check text-warning check-icon d-none"></i>
+                                </li>
+
+                                <!-- لغة الروسية -->
+                                <li class="lang-option px-3 py-2 d-flex justify-content-between align-items-center text-secondary"
+                                    data-lang="Russian" data-flag="assets/images/home/russian-flag.JPEG"
+                                    style="cursor: pointer;">
+                                    <span class="d-flex align-items-center gap-2">
+                                        <img src="assets/images/home/russian-flag.JPEG" alt="Russian" width="20"
+                                            height="15">
+                                        Russian
+                                    </span>
+                                    <i class="fa-solid fa-check text-warning check-icon d-none"></i>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <!-- قائمة اختيار العملة -->
+                        <div class="currency-dropdown-container position-relative d-inline-block">
+
+                            <!-- زرار العملة -->
+                            <button id="currency-btn"
+                                class="btn btn-sm text-white bg-transparent border-0  d-flex align-items-center gap-1"
+                                type="button">
+                                <span id="current-currency-text">USD</span>
+                                <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i>
+                            </button>
+
+                            <!-- القائمة المنسدلة للعملات (دولار و يورو فقط) -->
+                            <ul id="currency-list"
+                                class="d-none position-absolute bg-white shadow rounded py-2 list-unstyled"
+                                style="top: 100%; right: 0; min-width: 150px; z-index: 1050;">
+
+                                <li class="currency-option px-3 py-2 d-flex justify-content-between align-items-center bg-light text-dark fw-bold"
+                                    data-currency="USD" style="cursor: pointer;">
+                                    <span>Dollar (USD)</span>
+                                    <i class="fa-solid fa-check text-warning currency-check-icon"></i>
+                                </li>
+
+                                <li class="currency-option px-3 py-2 d-flex justify-content-between align-items-center text-secondary"
+                                    data-currency="EUR" style="cursor: pointer;">
+                                    <span>Euro (EUR)</span>
+                                    <i class="fa-solid fa-check text-warning currency-check-icon d-none"></i>
+                                </li>
+
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Middle Nav (Logo, Search, Cart) -->
             <div class="middle-nav-bar py-3">
@@ -102,6 +179,7 @@
             </div>
 
         </div>
+
 
         <!-- 3. Bottom White Nav (Categories & Links & Phone) -->
         <nav class="bottom-nav py-2 border-bottom shadow-sm">
@@ -134,6 +212,7 @@
                     <i class="fa-solid fa-phone-volume text-warning"></i> +1-202-555-0104
                 </div>
             </div>
+
         </nav>
 
     </header>
