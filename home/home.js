@@ -194,6 +194,84 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  
+  // ==========================================
+  // 1. تعريف العناصر
+  // ==========================================
+  const allCategoryBtn = document.getElementById("all-category-btn");
+  const categoryList = document.getElementById("category-list");
+  
+  const smartphoneBtn = document.getElementById("smartphone-btn");
+  const megaMenu = document.getElementById("mega-menu");
+
+  // ==========================================
+  // 2. فتح وقفل قائمة All Category عند الضغط
+  // ==========================================
+  allCategoryBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    categoryList.classList.toggle("d-none"); // يبدل بين إظهار وإخفاء القائمة
+  });
+
+  // ==========================================
+  // 3. فتح وقفل الـ Mega Menu عند الضغط على SmartPhone
+  // ==========================================
+  smartphoneBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    megaMenu.classList.toggle("d-none");
+  });
+
+  // ==========================================
+  // 4. إخفاء القوائم لو اليوزر داس في أي مكان فاضي
+  // ==========================================
+  document.addEventListener("click", function(event) {
+    // التحقق من مكان الضغطة
+    const isClickInsideCategory = allCategoryBtn.contains(event.target) || categoryList.contains(event.target);
+    const isClickInsideMegaMenu = smartphoneBtn.contains(event.target) || megaMenu.contains(event.target);
+
+    // لو الضغطة برة قائمة All Category، اقفلها
+    if (!isClickInsideCategory && !categoryList.classList.contains("d-none")) {
+      categoryList.classList.add("d-none");
+      megaMenu.classList.add("d-none"); // ونقفل كمان القائمة الكبيرة معاها
+    }
+  });
+
+  // ==========================================
+  // 5. التحكم التفاعلي في تبديل المنتجات داخل القائمة
+  // ==========================================
+  const brandLinks = document.querySelectorAll(".brand-link");
+  const productGroups = document.querySelectorAll(".product-group");
+
+  brandLinks.forEach(function(link) {
+    link.addEventListener("click", function(e) {
+      e.preventDefault(); // نمنع الرابط إنه يعمل ريفرش للصفحة
+
+      // أولاً: نشيل التنسيق النشط (اللون والخط العريض) من كل الماركات
+      brandLinks.forEach(function(item) {
+        item.classList.remove("fw-bold", "bg-light", "active-brand");
+      });
+
+      // ثانياً: نحط التنسيق النشط للماركة اللي دوسنا عليها بس
+      this.classList.add("fw-bold", "bg-light", "active-brand");
+
+      // ثالثاً: نخفي كل مجموعات المنتجات
+      productGroups.forEach(function(group) {
+        group.classList.add("d-none");
+      });
+
+      // رابعاً: نجيب الـ ID الخاص بالماركة ونظهر المنتجات بتاعتها
+      const targetId = this.getAttribute("data-target");
+      const targetGroup = document.getElementById(targetId);
+      
+      // لو الـ ID موجود، نشيل منه كلاس الإخفاء عشان يظهر
+      if (targetGroup) {
+        targetGroup.classList.remove("d-none");
+      }
+    });
+  });
+
+});
 document.addEventListener("DOMContentLoaded", function () {
 
     // =================  كود النشرة البريدية =================
