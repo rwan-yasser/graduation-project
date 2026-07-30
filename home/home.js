@@ -194,7 +194,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+document.addEventListener('DOMContentLoaded', function () {
+    // فتح وقفل الـ Popup من أيقونة الـ Nav
+    const userIcon = document.getElementById('userIconToggle');
+    const loginPopup = document.getElementById('loginPopup');
 
+    if (userIcon && loginPopup) {
+        userIcon.addEventListener('click', function (e) {
+            e.preventDefault(); // عشان الصفحة ما تعملش ريفريش
+            loginPopup.classList.toggle('show'); // بتبدل كلاس show عشان تظهر أو تختفي
+        });
+
+        // إغلاق الـ Popup لو المستخدم ضغط في أي مكان براها
+        document.addEventListener('click', function (e) {
+            if (!userIcon.contains(e.target) && !loginPopup.contains(e.target)) {
+                loginPopup.classList.remove('show');
+            }
+        });
+    }
+
+    // كود تشغيل أيقونة إظهار وإخفاء الباسورد
+    const togglePassword = document.getElementById('togglePassword');
+    if (togglePassword) {
+        togglePassword.addEventListener('click', function () {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = this.querySelector('i'); 
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        });
+    }
+
+    // تحديد الفورم بتاع تسجيل الدخول
+    const loginForm = document.querySelector('.login-popup form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault(); 
+            loginPopup.classList.remove('show');
+            alert('تم تسجيل الدخول بنجاح! أهلاً بك في متجرنا.');
+            loginForm.reset(); 
+        });
+    }
+});
 document.addEventListener("DOMContentLoaded", function() {
   
   // ==========================================

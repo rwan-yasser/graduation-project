@@ -173,7 +173,54 @@
                             <span class="cart-badge">2</span>
                         </a>
                         <a href="#" class="text-white"><i class="fa-regular fa-heart fs-5"></i></a>
-                        <a href="#" class="text-white"><i class="fa-regular fa-user fs-5"></i></a>
+
+                        <!-- الحاوية الخاصة بأيقونة المستخدم والـ Popup معاً -->
+                        <div class="user-menu-container position-relative">
+                            <a href="#" class="icon" id="userIconToggle">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                            <!-- الـ Popup مخفية هنا وهتظهر تحت الأيقونة -->
+                            <div class="login-popup position-absolute bg-white shadow rounded p-4 d-none"
+                                id="loginPopup" style="top: 120%; right: 0; min-width: 280px; z-index: 1050;">
+                                <h4 class="popup-title">Sign in to your account</h4>
+
+                                <form>
+                                    <div class="input-group mb-3 text-start">
+                                        <label for="email" class="form-label small text-muted mb-1">Email
+                                            Address</label> <input type="email" id="email"
+                                            class="form-control w-100 py-2" placeholder=" ">
+                                    </div>
+
+                                    <div class="input-group mb-4">
+                                        <div class="password-labels">
+                                            <label for="password"
+                                                class="form-label small text-muted mb-0">Password</label> <a href="#"
+                                                class="forgot-link">Forget Password</a>
+                                        </div>
+                                        <div class="password-wrapper ">
+                                            <input type="password" id="password" class="form-control w-100 py-2">
+                                            <span class="eye-icon position-absolute" id="togglePassword">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-login">
+                                        LOGIN <i class="fa-solid fa-arrow-right ms-2" style="font-size: 18px;"></i>
+                                    </button>
+
+                                    <div class="divider">
+                                        <span>Don’t have account</span>
+                                    </div>
+
+                                    <a href="clicon-signin/index.html"
+                                        class="btn btn-create btn-outline-dark w-100 py-2 fw-bold d-block text-center text-decoration-none">
+                                        CREATE ACCOUNT
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
