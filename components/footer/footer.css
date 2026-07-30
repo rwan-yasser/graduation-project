@@ -131,3 +131,39 @@ body {
 .close-modal:hover { color: #000; }
 .modal-content h3 { color: #fa8232; margin-bottom: 15px; font-size: 24px; }
 .modal-content p { color: #333; font-size: 16px; line-height: 1.5; }
+/* =========================================
+   تأثير مرور الماوس (Hover) على لينكات الفوتر
+   ========================================= */
+
+/* 1. التنسيق الأساسي للينكات */
+.footer-col ul li a {
+    color: #adb5bd; /* لون رمادي هادي للينك قبل الـ hover */
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease; /* حركة ناعمة */
+}
+
+/* 2. رسم الخط البرتقالي (مخفي في البداية وعرضه صفر) */
+.footer-col ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%; /* عشان يكون في نص الكلمة بالظبط */
+    transform: translateY(-50%);
+    width: 0; /* مش هيظهر لأن عرضه صفر */
+    height: 2px; /* سمك الخط */
+    background-color: yellow; /* اللون البرتقالي/الأصفر بتاع موقعك */
+    transition: all 0.3s ease; /* حركة ناعمة لظهور الخط */
+}
+
+/* 3. التأثير لما الماوس يقف على الكلمة */
+.footer-col ul li a:hover {
+    color: #ffffff; /* الكلمة تنور باللون الأبيض زي الصورة */
+    padding-left: 20px; /* الكلمة تتحرك لليمين عشان تسيب مكان للخط */
+}
+
+/* 4. إظهار الخط لما الماوس يقف على الكلمة */
+.footer-col ul li a:hover::before {
+    width: 15px; /* الخط هيتمد ويبقى عرضه 12 بيكسل ويظهر */
+}

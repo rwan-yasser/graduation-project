@@ -198,26 +198,153 @@ a {
     background-color: #ffffff;
     font-size: 14px;
 }
+/* =========================================
+   1. تنسيقات القائمة الجانبية (All Category)
+ ========================================= */
+   /* تحديد عرض القائمة عشان متكونش رفيعة (مربوطة بعرض الزرار) */
+#category-list {
+  min-width: 260px !important; /* تقدر تكبر الرقم أو تصغره حسب ما تحب */
+  width: max-content; /* عشان تتفرد على قد أطول كلمة جواها */
+}
+.category-list li a {
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
 
-.category-btn {
-    background-color: #f2f4f5;
+.category-list li a:hover {
+  background-color: #f8f9fa;
+  color: #fa8231 !important;
+}
+
+/* =========================================
+   2. تنسيقات القائمة الكبيرة (Mega Menu)
+   ========================================= */
+.mega-menu {
+  position: absolute;
+  top: -80px; 
+  left: 100%; 
+  margin-left: 2px;
+  width: 800px; 
+  /* يخلي العرض مرن عشان ماياخدش مساحة الشاشة كلها */
+  max-width: calc(100vw - 320px); 
+  min-height: 400px;
+  z-index: 1000;
+  border: 1px solid #eee;
+}
+
+/* =========================================
+   3. تنسيقات العواميد الداخلية في القائمة
+   ========================================= */
+/* عمود الماركات */
+.brands-column {
+  width: 200px;
+  overflow-y: auto;
+}
+
+.brands-column a:hover {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* تنسيق الماركة المختارة (النشطة حالياً) */
+.active-brand {
+  color: #fa8231 !important;
+  border-left: 3px solid #fa8231; /* خط صغير على الشمال بيدي شكل احترافي */
+}
+
+/* عمود المنتجات المميزة */
+.featured-column {
+  min-width: 300px;
+}
+
+.product-item {
+  border: 1px solid #dee2e6;
+}
+
+.product-item:hover {
+  border-color: #fa8231 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* عمود البانر الإعلاني */
+.promo-column {
+  width: 300px;
+}
+/* تثبيت شكل وزرار SHOP NOW عشان الكلام ميختفيش أبداً مع الهوفر */
+.shop-now-btn {
+  background-color: #fa8231 !important;
+  border-color: #fa8231 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.shop-now-btn:hover, 
+.shop-now-btn:focus, 
+.shop-now-btn:active {
+  background-color:transparent !important; /* درجة برتقالي أغمق سيكا للـ hover بس الكلام بيفضل أبيض وواضح */
+  color: #ffffff !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  outline: none !important;
+  filter: none !important;
+  
+}
+/* =========================================
+   4. التجاوب مع الشاشات (Responsive)
+   ========================================= */
+@media (max-width: 992px) {
+  
+  .mega-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    margin-left: 0;
     border: none;
-    font-weight: 600;
-    color: #191c1f;
-    padding: 10px 18px;
-    border-radius: 2px;
-}
+    border-top: 1px solid #eee;
+  }
 
-.menu-links a {
-    color: var(--text-muted);
-    font-weight: 500;
-    transition: 0.2s;
-}
+  /* عواميد الماركات والمنتجات تاخد العرض بالكامل */
+  .brands-column,
+  .featured-column {
+    width: 100% !important;
+    min-width: 100%;
+  }
 
-.menu-links a:hover {
-    color: var(--primary-orange);
-}
+  /* التعديل هنا: نظبط عرض المربع الأصفر عشان ميخرجش بره */
+  .promo-column {
+    width: calc(100% - 32px) !important; /* بنطرح الـ 16px يمين و 16px شمال بتوع الفراغ */
+    min-width: auto !important;
+    margin: 16px auto !important; /* عشان يفضل متسنتر في النص */
+  }
 
+  .brands-column {
+    border-right: none !important;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+  }
+  
+  .brands-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .brands-column ul li {
+    width: 100%;
+  }
+  
+  .brands-column ul li a {
+    text-align: left;
+    padding: 10px 15px !important;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+  }
+}
 .phone-contact {
     font-weight: 600;
     color: #191c1f;
