@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    .footer-content { flex-direction: column; }
+    .subscribe-form { flex-direction: column; }
+    .subscribe-form button { padding: 15px; margin-top: 10px; }
+    .brands-logos svg { height: 20px; }
+}

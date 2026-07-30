@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="../../vendor/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="../../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../vendor/bootstrap/bootstrap.min.css">
     <!-- Shared CSS -->
-    <link rel="stylesheet" href="../../shared/main.css">
+    <link rel="stylesheet" href="../../../shared/main.css">
     <!-- Navbar CSS -->
-    <link rel="stylesheet" href="navbar/navbar.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
     <!-- Footer CSS -->
-    <link rel="stylesheet" href="footer/footer.css">
-    <link rel="stylesheet" href="footer/footer-responsive.css">
-    <!-- Shopping Card CSS -->
-    <link rel="stylesheet" href="shoppingCart.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../footer/footer-responsive.css">
+    <!-- successCheckout CSS -->
+    <link rel="stylesheet" href="successCheckout.css">
 </head>
 
 <body>
 
     <main>
+
         <div id="nav-section">
             <!-- 2. Blue Header Container (Navigation & Middle Nav) -->
             <div class="blue-header-bg">
@@ -44,7 +45,7 @@
                             <div class="lang-curr-select d-flex gap-2">
                                 <select class="form-select form-select-sm border-0 bg-transparent text-white">
                                 <option value="eng" class="text-dark">Eng</option>
-                                </select>
+                            </select>
                                 <select class="form-select form-select-sm border-0 bg-transparent text-white">
                                 <option value="usd" class="text-dark">USD</option>
                             </select>
@@ -70,11 +71,11 @@
 
                         <!-- User Icons -->
                         <div class="nav-icons d-flex align-items-center gap-3 text-white">
-                            <a href="shoppingCart.html" class="cart-icon position-relative text-white">
+                            <a href="../../shoppingCart/shoppingCart.html" class="cart-icon position-relative text-white">
                                 <i class="fa-solid fa-cart-shopping fs-5"></i>
                                 <span id="cartIcon" class="cart-badge"></span>
                             </a>
-                            <a href="../wishlist/wishlist.html" class="cart-icon position-relative text-white">
+                            <a href="../../wishlist/wishlist.html" class="cart-icon position-relative text-white">
                                 <i class="fa-regular fa-heart fs-5"></i>
                                 <span id="wishlistIcon" class="cart-badge"></span>
                             </a>
@@ -118,110 +119,32 @@
             </nav>
         </div>
         <!-- ? -->
-
         <section class="bg-body-secondary py-2 text-secondary">
             <div class="container">
-                <a href="../../index.html">
+                <a href="../../../index.html">
                     <i class="fa-regular fa-house"></i>
                     <span>Home</span>
                 </a>
                 <i class="fa-solid fa-angle-right"></i>
-                <a href="shoppingCart.html" class="text-info">Shoping Card</a>
+                <a href="../../shoppingCart/shoppingCart.html">Shopping Card</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <a href="../checkOut.html" class="text-info">Checkout</a>
             </div>
         </section>
-        <section id="emptyCart" class="d-none justify-content-center  text-center">
-            <div class="w-75 my-5 ">
-                <img src="../../assets/images/cartImgs/empty-shopping-cart-illustration-concept-on-white-background-vector.jpg" class="w-100" alt="">
-                <p class="display-4 fw-bold mb-4">Your Cart is <span class="text-danger">Empty!</span></p>
-                <a href="../shop/shop.html" class="btn btn-danger  rounded-1  text-uppercase fw-semibold p-3  ">
-                    <i class="fa-solid fa-arrow-left  me-2"></i> return to shop
-                </a>
-            </div>
-        </section>
-        <section id="cartContent">
-            <div class="container p-3  my-4">
-                <div class="row align-items-start mx-0 gy-4 gy-xl-0">
-                    <div class=" col-12 col-xl-8 border border-1 rounded-2 py-3 ">
-                        <h4>Shoping Card</h4>
-                        <div class="row   text-uppercase  text-body-secondary bg-body-secondary py-1  my-3 border-top border-bottom ">
-                            <div class="col">
-                                <span>products</span>
-                            </div>
-                            <div class="col-2 d-none d-md-block">
-                                <span>price</span>
-                            </div>
-                            <div class="col-3 d-none d-md-block">
-                                <span>quantity</span>
-                            </div>
-                            <div class="col-2 d-none d-md-block">
-                                <span>sub-total</span>
-                            </div>
-                        </div>
-                        <div id="cartItems" class=" d-flex flex-column row-gap-5 row-gap-sm-4 ">
-                        </div>
-                        <div class=" row border-top   px-3  pt-3 mt-4 justify-content-between">
-                            <a href="../shop/shop.html" class="btn-outline-blue   btn w-auto rounded-1  text-uppercase fw-semibold py-2 px-3 ">
-                                <i class="fa-solid fa-arrow-left  me-2"></i> return to shop
-                            </a>
-                            <button onclick="updateCart()" class="btn-outline-blue   btn w-auto rounded-1 text-uppercase fw-semibold py-2 px-3 ">
-                                update cart
-                            </button>
-                        </div>
-                    </div>
-                    <div class=" col-12 col-xl-4 px-0  px-xl-3 ">
-                        <div class="row gy-4 ">
-                            <div class="col-12 col-md-6 col-xl-12">
-                                <div class="card ">
-                                    <div class="card-body row gy-3 ">
-                                        <h5 class="card-title ">Card Totals</h5>
-                                        <span class="text-body-secondary col-6 ">Sub-total</span>
-                                        <span id="checkoutSubTotal" class="fw-semibold col text-end "></span>
-                                        <span class="text-body-secondary col-6 ">Shipping</span>
-                                        <span class="fw-semibold col text-end ">Free</span>
-                                        <span class="text-body-secondary col-6 ">Discount</span>
-                                        <span id="checkoutDiscount" class="fw-semibold col text-end ">$--</span>
-                                        <span class="text-body-secondary col-6 ">Tax</span>
-                                        <span class="fw-semibold col text-end ">$61.99</span>
-                                    </div>
-                                    <div class="card-footer bg-transparent fw-semibold ">
-                                        <div class="d-flex justify-content-between ">
-                                            <span>Total</span>
-                                            <span id="checkoutTotal"></span>
-                                        </div>
-                                        <a href="../checkOut/checkOut.html" class="btn-orange btn fw-semibold col-12 py-2 mt-3 mb-2 text-uppercase rounded-1 ">
-                                            Proceed to Checkout <i class=" ms-2 fa-solid fa-arrow-right "></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-6 col-xl-12 ">
-                                <div class="card  ">
-                                    <div class="card-header bg-transparent py-3 fw-semibold ">
-                                        Coupon Code
-                                    </div>
-                                    <div class="card-body">
-                                        <form onsubmit="applyCoupon(event)">
-                                            <input type="text" class="form-control " id="copounInput" placeholder="Enter Code">
-                                            <div></div>
-                                            <button class="btn-blue btn rounded-1 mt-3 text-uppercase fw-semibold py-2 px-3 ">apply coupon</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <section class=" my-5 d-flex justify-content-center  text-center">
+            <div class="col-10  col-md-8 col-lg-6 col-xxl-4">
+                <div class="d-inline-block display-5 my-4 p-3 text-success bg-success-subtle  border border-5  border-success  rounded-circle">
+                    <i class="fa-solid fa-check"></i>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
-                <div id="liveToast" class="toast border-info" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-                        <strong class="me-auto">Notification</strong>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body">
-                    </div>
+                <h3 class="fw-semibold">Your order is successfully place</h3>
+                <p class="text-secondary">Pellentesque sed lectus nec tortor tristique accumsan quis dictum risus. Donec volutpat mollis nulla non facilisis.</p>
+                <div class="d-flex flex-wrap gap-3 mt-4 ">
+                    <a href="./../../index.html" class="btn-outline-orange btn fw-semibold col-12 col-sm-6 py-3  text-uppercase rounded-1 ">
+                        <i class="me-2 fa-solid fa-layer-group"></i> go to dashboard
+                    </a>
+                    <a href="" class="btn-orange btn fw-semibold col py-3   text-uppercase rounded-1 ">
+                        view order <i class=" ms-2 fa-solid fa-arrow-right "></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -341,9 +264,10 @@
         </div>
     </main>
 
-    <script src="../../vendor/bootstrap/bootstrap.bundle.min.js "></script>
-    <script src="footer/footer.js"></script>
-    <script src="shoppingCart.js"></script>
+
+    <script src="../../../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../footer/footer.js"></script>
+    <script src="successCheckout.js"></script>
 </body>
 
 </html>
