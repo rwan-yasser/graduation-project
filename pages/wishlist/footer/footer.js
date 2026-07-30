@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // =================  كود التطبيقات (Coming Soon) =================
 
+    const subscribeModal = document.querySelectorAll('#subscribe-modal');
     const comingSoonBtns = document.querySelectorAll('.coming-soon-btn');
     const comingSoonModal = document.getElementById('coming-soon-modal');
     const closeComingSoonModal = document.querySelector('.close-coming-soon');

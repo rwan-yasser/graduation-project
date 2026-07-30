@@ -47,10 +47,20 @@ console.log(wishlist);
 let cartIcon = document.getElementById('cartIcon')
 let wishlistIcon = document.getElementById('wishlistIcon')
 
-cartIcon.innerHTML = (!cart || cart.length == 0) ? '' : `<span>${cart.length}</span>`
-wishlistIcon.innerHTML = (!wishlist || wishlist.length == 0) ? '' : `<span>${wishlist.length}</span>`
-
-
+if (!cart || cart.length == 0) {
+    cartIcon.innerText = ''
+    cartIcon.classList.remove('cart-badge')
+} else {
+    cartIcon.innerText = cart.length
+    cartIcon.classList.add('cart-badge')
+}
+if (!wishlist || wishlist.length == 0) {
+    wishlistIcon.innerText = ''
+    wishlistIcon.classList.remove('cart-badge')
+} else {
+    wishlistIcon.innerText = wishlist.length
+    wishlistIcon.classList.add('cart-badge')
+}
 
 let emptyWishlist = document.getElementById('emptyWishlist')
 let wishlistContent = document.getElementById('wishlistContent')
@@ -64,13 +74,14 @@ const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
 
 function showWishlist() {
     if (!wishlist || wishlist.length == 0) {
-        wishlistIcon.innerHTML = ''
+        wishlistIcon.innerText = ''
         wishlistIcon.classList.remove('cart-badge')
 
         emptyWishlist.classList.replace('d-none', 'd-flex')
         wishlistContent.classList.add('d-none')
     } else {
-        wishlistIcon.innerHTML = `<span>${wishlist.length}</span>`
+        wishlistIcon.innerText = wishlist.length
+        wishlistIcon.classList.add('cart-badge')
 
         wishlistItems.innerHTML = ''
         wishlist.forEach((wishlistItem, index) => {
@@ -114,7 +125,8 @@ function addToCart(i) {
     cart.unshift(wishlist[i])
 
     localStorage.setItem("cart", JSON.stringify(cart))
-     cartIcon.innerHTML = `<span>${cart.length}</span>`
+    cartIcon.innerText = cart.length
+    cartIcon.classList.add('cart-badge')
 
     toastBody.innerText="Product is added to cart successfully."
     toastBootstrap.show()
