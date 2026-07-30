@@ -8,33 +8,20 @@
 
 let cart1 = [{
         img: '../../assets/images/cartImgs/Image.png',
-        description: 'pppppp',
+        description: '4K UHD LED Smart TV with Chromecast Built-in',
         originalPrice: 99,
         discountPrice: 70,
         amount: 1
     },
     {
-        img: '../../assets/images/cartImgs/Image.png',
-        description: 'pppppp iii ii ol lo',
-        originalPrice: 99,
-        // discountPrice: 70,
-        amount: 2
-    },
-    {
-        img: '../../assets/images/cartImgs/Image.png',
-        description: '4K UHD LED Smart TV with Chromecast Built-in',
-        originalPrice: 99,
-        discountPrice: 70,
+        img: '../../assets/images/cartImgs/Image2.png',
+        description: 'Wired Over-Ear Gaming Headphones with USB',
+        originalPrice: 250,
         amount: 3
     }
 ]
 
 // localStorage.setItem("cart", JSON.stringify(cart1));
-
-
-
-
-
 
 
 
@@ -61,8 +48,6 @@ if (!wishlist || wishlist.length == 0) {
     wishlistIcon.innerText = wishlist.length
     wishlistIcon.classList.add('cart-badge')
 }
-
-
 
 
 let emptyCart = document.getElementById('emptyCart')

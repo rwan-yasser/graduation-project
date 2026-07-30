@@ -10,28 +10,37 @@ let wishlist1 = [{
         img: '../../assets/images/wishlistImgs/Image.png',
         description: 'Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear Headphones for Workouts and Running, Triple Black',
         originalPrice: 1299,
-        // discountPrice: 999,
+        discountPrice: 999,
         isInStock: true
     },
     {
-        img: '../../assets/images/wishlistImgs/Image.png',
-        description: 'Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear Headphones for Workouts and Running, Triple Black',
-        originalPrice: 199,
-        discountPrice: 99,
+        img: '../../assets/images/wishlistImgs/Image2.png',
+        description: 'Simple Mobile 5G LTE Galexy 12 Mini 512GB Gaming Phone',
+        originalPrice: 230000,
+        isInStock: true
+    },
+    {
+        img: '../../assets/images/wishlistImgs/Image3.png',
+        description: 'Portable Wshing Machine, 11lbs capacity Model 18NMFIAM',
+        originalPrice: 70,
+        isInStock: true
+    },
+    {
+        img: '../../assets/images/wishlistImgs/Image4.png',
+        description: 'TOZO T6 True Wireless Earbuds Bluetooth Headphones Touch Control with Wireless Charging Case IPX8 Waterproof Stereo Earphones in-Ear',
+        originalPrice: 250,
+        discountPrice: 220,
         isInStock: false
     },
     {
-        img: '../../assets/images/wishlistImgs/Image.png',
-        description: 'Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear Headphones for Workouts and Running, Triple Black',
-        originalPrice: 129,
-        discountPrice: 99,
+        img: '../../assets/images/wishlistImgs/Image5.png',
+        description: 'Wyze Cam Pan v2 1080p Pan/Tilt/Zoom Wi-Fi Indoor Smart Home Camera with Color Night Vision, 2-Way Audio',
+        originalPrice: 1499.99,
         isInStock: true
     }
 ]
 
 // localStorage.setItem("wishlist", JSON.stringify(wishlist1));
-
-
 
 
 

@@ -87,6 +87,15 @@ showOrderSummaryTotals()
 let registerForm = document.getElementById('registerForm')
 let requiredInputs = registerForm.querySelectorAll(".required")
 
+
+let toastBody = document.querySelector('.toast-body')
+
+
+const toastLiveExample = document.getElementById('liveToast')
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+
+
+
 let handleError = (ele, msg = "") => {
     ele.nextElementSibling.innerText = msg
 }
@@ -155,5 +164,8 @@ registerForm.addEventListener("submit", (e) => {
         cartIcon.innerText = ''
         cartIcon.classList.remove('cart-badge')
         window.location.href = "successCheckout/successCheckout.html"
+    } else {
+        toastBody.innerText = "Missing or Wrong Fields"
+        toastBootstrap.show()
     }
 })
