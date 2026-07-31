@@ -218,8 +218,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (togglePassword) {
         togglePassword.addEventListener('click', function () {
             const passwordInput = document.getElementById('password');
-            const eyeIcon = this.querySelector('i'); 
-            
+            const eyeIcon = this.querySelector('i');
+
             if (passwordInput.type === 'password') {
                 passwordInput.type = 'text';
                 eyeIcon.classList.remove('fa-eye');
@@ -236,88 +236,285 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.querySelector('.login-popup form');
     if (loginForm) {
         loginForm.addEventListener('submit', function (e) {
-            e.preventDefault(); 
+            e.preventDefault();
             loginPopup.classList.remove('show');
             alert('تم تسجيل الدخول بنجاح! أهلاً بك في متجرنا.');
-            loginForm.reset(); 
+            loginForm.reset();
         });
     }
 });
-document.addEventListener("DOMContentLoaded", function() {
-  
-  // ==========================================
-  // 1. تعريف العناصر
-  // ==========================================
-  const allCategoryBtn = document.getElementById("all-category-btn");
-  const categoryList = document.getElementById("category-list");
-  
-  const smartphoneBtn = document.getElementById("smartphone-btn");
-  const megaMenu = document.getElementById("mega-menu");
+document.addEventListener('DOMContentLoaded', function () {
+    let quickViewModal = document.getElementById('quickViewModal');
 
-  // ==========================================
-  // 2. فتح وقفل قائمة All Category عند الضغط
-  // ==========================================
-  allCategoryBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    categoryList.classList.toggle("d-none"); // يبدل بين إظهار وإخفاء القائمة
-  });
+    if (quickViewModal) {
+        quickViewModal.addEventListener('show.bs.modal', function (event) {
+            let button = event.relatedTarget;
+            if (!button) return;
 
-  // ==========================================
-  // 3. فتح وقفل الـ Mega Menu عند الضغط على SmartPhone
-  // ==========================================
-  smartphoneBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    megaMenu.classList.toggle("d-none");
-  });
+            // 1. جلب الصورة الرئيسية من الزر أو الكارت
+            let imgSrc = button.getAttribute('data-main-img');
+            if (!imgSrc) {
+                let card = button.closest('.product-card') || button.closest('.col');
+                let img = card ? card.querySelector('img') : null;
+                if (img) imgSrc = img.src;
+            }
+            if (!imgSrc) return;
 
-  // ==========================================
-  // 4. إخفاء القوائم لو اليوزر داس في أي مكان فاضي
-  // ==========================================
-  document.addEventListener("click", function(event) {
-    // التحقق من مكان الضغطة
-    const isClickInsideCategory = allCategoryBtn.contains(event.target) || categoryList.contains(event.target);
-    const isClickInsideMegaMenu = smartphoneBtn.contains(event.target) || megaMenu.contains(event.target);
+            // 2. تحديث الصورة الكبيرة في النافذة
+            let mainImgEl = document.getElementById('mainProductImg');
+            if (mainImgEl) {
+                mainImgEl.src = imgSrc;
+            }
 
-    // لو الضغطة برة قائمة All Category، اقفلها
-    if (!isClickInsideCategory && !categoryList.classList.contains("d-none")) {
-      categoryList.classList.add("d-none");
-      megaMenu.classList.add("d-none"); // ونقفل كمان القائمة الكبيرة معاها
+            // 3. تفريغ السلايدر وملئه بالصورة الرئيسية + صور الزوايا
+            let thumbSlider = document.getElementById('thumbSlider');
+            if (thumbSlider) {
+                thumbSlider.innerHTML = '';
+
+                function createThumb(src, isActive = false) {
+                    let thumb = document.createElement('img');
+                    thumb.src = src;
+                    thumb.className = `thumb-img border p-1 flex-shrink-0 ${isActive ? 'border-warning active-thumb' : ''}`;
+                    thumb.style.width = '60px';
+                    thumb.style.height = '60px';
+                    thumb.style.objectFit = 'contain';
+                    thumb.style.cursor = 'pointer';
+                    thumb.onclick = function () { changeImage(this); };
+                    return thumb;
+                }
+
+                // أ- إضافة الصورة الرئيسية أولاً
+                thumbSlider.appendChild(createThumb(imgSrc, true));
+
+                // ب- جلب جميع صور الزوايا (data-thumb1, data-thumb2, ...) أوتوماتيك
+                for (let i = 1; i <= 5; i++) {
+                    let thumbSrc = button.getAttribute(`data-thumb${i}`);
+                    if (thumbSrc && thumbSrc.trim() !== "" && !thumbSrc.includes('رابط_')) {
+                        thumbSlider.appendChild(createThumb(thumbSrc, false));
+                    }
+                }
+            }
+        });
     }
-  });
+});
 
-  // ==========================================
-  // 5. التحكم التفاعلي في تبديل المنتجات داخل القائمة
-  // ==========================================
-  const brandLinks = document.querySelectorAll(".brand-link");
-  const productGroups = document.querySelectorAll(".product-group");
+// دالة تغيير الصورة عند الضغط على أي صورة مصغرة في السلايدر
+window.changeImage = function (thumbElement) {
+    let mainImgEl = document.getElementById('mainProductImg');
+    if (mainImgEl) {
+        mainImgEl.src = thumbElement.src;
+    }
+    let allThumbs = document.querySelectorAll('#thumbSlider .thumb-img');
+    allThumbs.forEach(t => t.classList.remove('border-warning', 'active-thumb'));
+    thumbElement.classList.add('border-warning', 'active-thumb');
+};
+document.addEventListener('DOMContentLoaded', function () {
+    // 1. التعامل مع أزرار الإضافة للسلة في كل الصفحة
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
-  brandLinks.forEach(function(link) {
-    link.addEventListener("click", function(e) {
-      e.preventDefault(); // نمنع الرابط إنه يعمل ريفرش للصفحة
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // سحب بيانات المنتج من زرار الـ Add to Cart
+            let productName = this.getAttribute('data-name') || "Product Item";
+            let productPrice = parseFloat(this.getAttribute('data-price')) || 0.00;
+            let productImg = this.getAttribute('data-img') || "assets/images/default.jpg";
 
-      // أولاً: نشيل التنسيق النشط (اللون والخط العريض) من كل الماركات
-      brandLinks.forEach(function(item) {
-        item.classList.remove("fw-bold", "bg-light", "active-brand");
-      });
+            // جلب السلة القديمة من الـ localStorage (أو مصفوفة فارغة)
+            let cart = JSON.parse(localStorage.getItem('cliconCart')) || [];
 
-      // ثانياً: نحط التنسيق النشط للماركة اللي دوسنا عليها بس
-      this.classList.add("fw-bold", "bg-light", "active-brand");
+            // التحقق هل المنتج موجود قبل كده في السلة؟ لو اه، نزود الكمية
+            let existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                // لو مش موجود، نضيفه كمنتج جديد
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    img: productImg,
+                    quantity: 1
+                });
+            }
 
-      // ثالثاً: نخفي كل مجموعات المنتجات
-      productGroups.forEach(function(group) {
-        group.classList.add("d-none");
-      });
+            // حفظ السلة وتحديث الكاونتر فوق
+            localStorage.setItem('cliconCart', JSON.stringify(cart));
+            updateCartBadge();
 
-      // رابعاً: نجيب الـ ID الخاص بالماركة ونظهر المنتجات بتاعتها
-      const targetId = this.getAttribute("data-target");
-      const targetGroup = document.getElementById(targetId);
-      
-      // لو الـ ID موجود، نشيل منه كلاس الإخفاء عشان يظهر
-      if (targetGroup) {
-        targetGroup.classList.remove("d-none");
-      }
+            // رسالة نجاح خفيفة للمستخدم
+            alert(`تم إضافة "${productName}" إلى سلة التسوق بنجاح!`);
+        });
     });
-  });
+
+    // 2. دالة تحديث رقم الـ Badge (العدد) فوق أيقونة السلة في النافبار
+    function updateCartBadge() {
+        let cart = JSON.parse(localStorage.getItem('cliconCart')) || [];
+        let totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        // البحث عن الـ Badge في الهيدر وتحديث رقمه
+        let cartBadge = document.querySelector('.cart-badge');
+        if (cartBadge) {
+            cartBadge.textContent = totalCount;
+        }
+    }
+
+    // تحديث العدد أول ما الصفحة تفتح
+    updateCartBadge();
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const modalAddToCartBtn = document.querySelector('.modal-add-to-cart-btn');
+
+    if (modalAddToCartBtn) {
+        modalAddToCartBtn.addEventListener('click', function () {
+            // 1. سحب بيانات المنتج الحالي من شاشة الـ Quick View
+            let productNameEl = document.querySelector('#quickViewModal h4'); // عنوان المنتج في المودال
+            let productPriceEl = document.querySelector('#quickViewModal .fw-bold[style*="color: #2da5f3"]'); // السعر
+            let mainImgEl = document.getElementById('mainProductImg'); // الصورة الكبيرة المعروضة
+            let qtyInput = document.getElementById('qtyInput'); // حقل الكمية
+
+            let productName = productNameEl ? productNameEl.textContent.trim() : "Product Item";
+
+            // استخراج الرقم النقي من السعر (تحويله لـ Number)
+            let priceText = productPriceEl ? productPriceEl.textContent.replace(/[^0-9.]/g, '') : "0";
+            let productPrice = parseFloat(priceText) || 0.00;
+
+            let productImg = mainImgEl ? mainImgEl.src : "assets/images/default.jpg";
+
+            // قراءة الكمية المحددة في الـ Input (ولو مش موجودة تبقى 1)
+            let quantity = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+
+            // 2. جلب السلة من localStorage
+            let cart = JSON.parse(localStorage.getItem('cliconCart')) || [];
+
+            // 3. التحقق إذا كان المنتج موجود مسبقاً في السلة
+            let existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += quantity; // زود الكمية باللي اليوزر اختاره
+            } else {
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    img: productImg,
+                    quantity: quantity
+                });
+            }
+
+            // 4. حفظ البيانات وتحديث الـ Badge فوق في النافبار
+            localStorage.setItem('cliconCart', JSON.stringify(cart));
+
+            let cartBadge = document.querySelector('.cart-badge');
+            if (cartBadge) {
+                let totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartBadge.textContent = totalCount;
+            }
+
+            // 5. إشعار نجاح وإغلاق المودال أوتوماتيك (اختياري)
+            alert(`تم إضافة ${quantity} من "${productName}" إلى سلة التسوق!`);
+
+            // إغلاق نافذة المودال بعد الإضافة
+            let quickViewModalEl = document.getElementById('quickViewModal');
+            let modalInstance = bootstrap.Modal.getInstance(quickViewModalEl);
+            if (modalInstance) {
+                modalInstance.hide();
+            }
+
+            // تنظيف الباكيدج السوداء والانتقال لصفحة السلة بعد جزء من الثانية
+            setTimeout(() => {
+                cleanupModalBackdrops();
+                window.location.href = "Pages/shoppingCart/shoppingCart.html"; 
+            }, 200);
+        });
+    }
+});
+// دالة لتنظيف أي خلفية سوداء عالقة بعد إغلاق أي Modal
+function cleanupModalBackdrops() {
+    // إزالة كلاس الـ modal-open من الجسم عشان الشاشة ترجع تتحرك عادي
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+
+    // مسح أي عناصر خلفية سوداء (Backdrop) عالقة
+    const backdrops = document.querySelectorAll('.modal-backdrop');
+    backdrops.forEach(backdrop => backdrop.remove());
+}
+
+// تشغيل التنظيف أول ما الصفحة تفتح أو يحصل انتقال
+document.addEventListener('DOMContentLoaded', cleanupModalBackdrops);
+window.addEventListener('pageshow', cleanupModalBackdrops);
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ==========================================
+    // 1. تعريف العناصر
+    // ==========================================
+    const allCategoryBtn = document.getElementById("all-category-btn");
+    const categoryList = document.getElementById("category-list");
+
+    const smartphoneBtn = document.getElementById("smartphone-btn");
+    const megaMenu = document.getElementById("mega-menu");
+
+    // ==========================================
+    // 2. فتح وقفل قائمة All Category عند الضغط
+    // ==========================================
+    allCategoryBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        categoryList.classList.toggle("d-none"); // يبدل بين إظهار وإخفاء القائمة
+    });
+
+    // ==========================================
+    // 3. فتح وقفل الـ Mega Menu عند الضغط على SmartPhone
+    // ==========================================
+    smartphoneBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        megaMenu.classList.toggle("d-none");
+    });
+
+    // ==========================================
+    // 4. إخفاء القوائم لو اليوزر داس في أي مكان فاضي
+    // ==========================================
+    document.addEventListener("click", function (event) {
+        // التحقق من مكان الضغطة
+        const isClickInsideCategory = allCategoryBtn.contains(event.target) || categoryList.contains(event.target);
+        const isClickInsideMegaMenu = smartphoneBtn.contains(event.target) || megaMenu.contains(event.target);
+
+        // لو الضغطة برة قائمة All Category، اقفلها
+        if (!isClickInsideCategory && !categoryList.classList.contains("d-none")) {
+            categoryList.classList.add("d-none");
+            megaMenu.classList.add("d-none"); // ونقفل كمان القائمة الكبيرة معاها
+        }
+    });
+
+    // ==========================================
+    // 5. التحكم التفاعلي في تبديل المنتجات داخل القائمة
+    // ==========================================
+    const brandLinks = document.querySelectorAll(".brand-link");
+    const productGroups = document.querySelectorAll(".product-group");
+
+    brandLinks.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+            e.preventDefault(); // نمنع الرابط إنه يعمل ريفرش للصفحة
+
+            // أولاً: نشيل التنسيق النشط (اللون والخط العريض) من كل الماركات
+            brandLinks.forEach(function (item) {
+                item.classList.remove("fw-bold", "bg-light", "active-brand");
+            });
+
+            // ثانياً: نحط التنسيق النشط للماركة اللي دوسنا عليها بس
+            this.classList.add("fw-bold", "bg-light", "active-brand");
+
+            // ثالثاً: نخفي كل مجموعات المنتجات
+            productGroups.forEach(function (group) {
+                group.classList.add("d-none");
+            });
+
+            // رابعاً: نجيب الـ ID الخاص بالماركة ونظهر المنتجات بتاعتها
+            const targetId = this.getAttribute("data-target");
+            const targetGroup = document.getElementById(targetId);
+
+            // لو الـ ID موجود، نشيل منه كلاس الإخفاء عشان يظهر
+            if (targetGroup) {
+                targetGroup.classList.remove("d-none");
+            }
+        });
+    });
 
 });
 document.addEventListener("DOMContentLoaded", function () {

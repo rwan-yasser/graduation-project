@@ -339,6 +339,162 @@ body {
   }
 }
 
+body {
+  background-color: #f8f9fa;
+}
+
+/* ================== تنسيق الصور الصغيرة والسلايدر ================== */
+.thumb-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e4e7e9 !important;
+  border-radius: 4px;
+}
+
+.thumb-img:hover,
+.thumb-img.active-thumb {
+  border: 2px solid #fa8232 !important;
+}
+
+.slider-btn {
+  background-color: #fa8232;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.slider-btn:hover {
+  background-color: #e57227;
+}
+
+/* إخفاء شريط التمرير لحاوية الصور */
+#thumbSlider::-webkit-scrollbar {
+  display: none;
+}
+
+#thumbSlider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ================== الألوان (الدائرة لاختيار اللون) ================== */
+.color-circle {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.color-circle.active {
+  border: 2px solid #fa8232 !important;
+}
+
+/* ================== الأزرار الرئيسية ================== */
+.btn-orange {
+  background-color: #fa8232;
+  color: white;
+  border: none;
+  letter-spacing: 0.3px;
+  transition: 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e57227;
+  color: white;
+}
+
+.btn-outline-orange {
+  color: #fa8232;
+  border: 2px solid #fa8232;
+  background-color: transparent;
+  letter-spacing: 0.3px;
+  transition: 0.3s ease;
+}
+
+.btn-outline-orange:hover {
+  background-color: #fa8232;
+  color: white;
+}
+
+/* ================== صندوق الكمية ================== */
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: #475156;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.qty-input {
+  width: 100%;
+  text-align: center;
+  border: none;
+  color: #191c1f;
+  background: transparent;
+}
+
+.qty-input:focus {
+  outline: none;
+}
+
+/* ================== القوائم المنسدلة (Dropdowns) ================== */
+.custom-select-height {
+  height: 44px;
+  font-size: 13px;
+  color: #475156;
+  border-color: #e4e7e9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.custom-select-height:focus {
+  border-color: #fa8232;
+  box-shadow: 0 0 0 0.2rem rgba(250, 130, 50, 0.25);
+}
+
+/* ================== أيقونات الدفع والمشاركة ================== */
+.payment-icon {
+  height: 18px;
+  object-fit: contain;
+  background-color: white;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-orange {
+  color: #fa8232 !important;
+}
+
+.hover-orange:hover {
+  color: #fa8232 !important;
+  transition: color 0.3s ease;
+}
+
+/* خطوط دقيقة لتطابق التصميم */
+.fs-8 {
+  font-size: 13px !important;
+}
+
 /* =========================================
    تنسيقات القوائم المنسدلة (اللغة والعملة)
    ========================================= */
