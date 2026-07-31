@@ -20,9 +20,275 @@
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="shop-responsive.css">
 </head>
-
 <body>
-
+    <nav aria-label="breadcrumb" class="container mt-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+        <li class="breadcrumb-item active text-primary" aria-current="page">Shop</li>
+    </ol>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="row g-3">
+            <div class="col-3" id="sidebar">
+                <div class="category">
+                    <h2>category</h2>
+                    <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="electronics-devices" value="electronics-devices">
+                    <label class="form-check-label" for="electronics-devices">
+                        Electronics Devices
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="computer-laptop" value="computer-laptop">
+                    <label class="form-check-label" for="computer-laptop">
+                        Computer & Laptop
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio"  name="category" id="computer-accessories" value="computer-accessories">
+                    <label class="form-check-label" for="computer-accessories">
+                        Computer Accessories
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="Smartphone" value="Smartphone">
+                    <label class="form-check-label" for="Smartphone">
+                        SmartPhone
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="headphone" value="headphone">
+                    <label class="form-check-label" for="headphone">
+                        Headphone
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio"  name="category" id="mobile-accessories" value="mobile-accessories">
+                    <label class="form-check-label" for="mobile-accessories">
+                        Mobile Accessories
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="gamingconsole" value="gamingconsole">
+                    <label class="form-check-label" for="gamingconsole">
+                        Gaming Console
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="camera-photo" value="camera-photo">
+                    <label class="form-check-label" for="camera-photo">
+                        Camera & Photo
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="tv-homesappliances" value="tv-homesappliances">
+                    <label class="form-check-label" for="tv-homesappliances">
+                        TV & Homes Appliances
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="watchs-accessories" value="watchs-accessories">
+                    <label class="form-check-label" for="watchs-accessories">
+                        Watchs & Accessories
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="gps-navigation" value="gps-navigation">
+                    <label class="form-check-label" for="gps-navigation">
+                        GPS & Navigation
+                    </label>
+                </div>
+                <div class="form-check pb-1">
+                    <input class="form-check-input" type="radio" name="category" id="warable-technology" value="warable-technology">
+                    <label class="form-check-label" for="warable-technology">
+                        Warable Technology
+                    </label>
+                </div>
+                </div>
+                <hr>
+                
+                <div class="price-range">
+                    <h2>Price Range</h2>
+                        <div class="slider-container">
+                            <div class="track"></div>
+                            <div class="track-active" id="trackActive"></div>
+                            <input type="range" id="minRange" min="0" max="10000" value="0" step="10">
+                            <input type="range" id="maxRange" min="0" max="10000" value="10000" step="10">
+                        </div>
+                            <div class="inputs-row">
+                                <div class="field">
+                                <input type="text" id="minInput" placeholder="Min price" >
+                                </div>
+                                <div class="field">
+                                <input type="text" id="maxInput" placeholder="Max price">
+                                </div>
+                            </div>
+                            <ul class="preset-list" id="presetList">
+                                <li class="preset-item" data-min="0" data-max="10000"><span class="preset-dot"></span>All Price</li>
+                                <li class="preset-item" data-min="0" data-max="20"><span class="preset-dot"></span>Under $20</li>
+                                <li class="preset-item" data-min="25" data-max="100"><span class="preset-dot"></span>$25 to $100</li>
+                                <li class="preset-item" data-min="100" data-max="300"><span class="preset-dot"></span>$100 to $300</li>
+                                <li class="preset-item" data-min="300" data-max="500"><span class="preset-dot"></span>$300 to $500</li>
+                                <li class="preset-item" data-min="500" data-max="1000"><span class="preset-dot"></span>$500 to $1,000</li>
+                                <li class="preset-item" data-min="1000" data-max="10000"><span class="preset-dot"></span>$1,000 to $10,000</li>
+                            </ul>
+                        </div>
+                        <hr>
+                    <div class="brands-wrap">
+                    <h2>Popular Brands</h2>
+                    
+                    <div class="brands-grid ">
+                        <div class="row mb-2">
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="apple" value="apple" >
+                        Apple
+                        </div>
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="google" value="google" >
+                        Google
+                        </div>
+                        </div>
+                        <div class="row mb-2">
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="microsoft" value="microsoft" >
+                        Microsoft
+                        </div>
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="samsung" value="samsung">
+                        Samsung
+                        </div>
+                        </div>
+                        <div class="row mb-2">
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="dell" value="dell">
+                        Dell
+                        </div>
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="hp" value="hp" >
+                        HP
+                        </div>
+                        </div>
+                        
+                        <div class="row mb-2">
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="symphony" value="symphony">
+                        Symphony
+                        </div>
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="xiaomi" value="xiaomi">
+                        Xiaomi
+                        </div>
+                        </div>
+                        
+                        <div class="row mb-2">
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="sony" value="sony">
+                        Sony
+                        </div>
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="panasonic" value="panasonic" >
+                        Panasonic
+                        </div>
+                        </div>
+                        
+                        <div class="row mb-2">
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="lg" value="lg" >
+                        LG
+                        </div>
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="intel" value="intel">
+                        Intel
+                        </div>
+                        </div>
+                        <div class="brand-check col-6">
+                        <input type="checkbox" name="brand" id="oneplus" value="oneplus">
+                        One Plus
+                        </div>
+                    </div>
+                    </div>
+                    <hr>
+                    <div >
+                            <h2>Popular Tags</h2>
+                            <div id="tagsWrap" class="tags-wrap d-flex flex-wrap ">
+                            <button  class="tag-btn border p-2 m-1 bg-white" data-value="game">Game</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="iphone">iphone</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="tv">TV</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="asus-laptop">Asus Laptops</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="macbook">Macbook</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="ssd">SSD</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="graphics-card">Graphics Card</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="powerbank">Power Bank</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="smart-tv">Smart TV</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="speaker">Speaker</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="tablet">Tablet</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="microwave">Microwave</button>
+                            <button class="tag-btn border p-2 m-1 bg-white" data-value="samsung">Samsung</button>
+                        </div>
+                    </div>
+                    <div class="ad-part">
+                        <div class="container">
+                        <img src="../../assets/images/shop/49aacdc08c7492cde9bab553d53c76ee04dce990.png"  alt="">
+                        <h6><i class="fa-brands fa-apple"></i>Watch</h6>
+                        <h6 class="series">series 7</h6>
+                        <h6>Heavy on Features.<br>Light on Price.</h6>
+                        <h6>only for:<span>$299 USD</span></h6>
+                        <button class=" cart w-100 p-2 mb-2">add to cart</button>
+                        <button class="details w-100 p-2 ">view details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-9">
+ 
+  <div class="filter-bar d-flex justify-content-between align-items-center ">
+    <div class="search-box border border-2 ">
+      <input class="border border-0" type="text" id="searchInput" placeholder="Search for anything...">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="sort-box">
+      <span>Sort by:</span>
+      <select class="p-2" id="sortSelect">
+        <option value="popular">Most Popular</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+      </select>
+    </div>
+  </div>
+ 
+  <div class="active-filters-bar d-flex justify-content-between align-items-center mb-3">
+    <div class="active-filters" id="activeFiltersList">
+      <span class="active-filters-label">Active Filters:</span>
+    </div>
+    <div class="results-count">
+      <strong id="resultsCount">0</strong> Results found.
+    </div>
+  </div>
+  <div class=" d-flex flex-wrap " id="products-grid"></div>
+    
+<nav class="pagination-wrap" id="pagination" aria-label="Product pages">
+  <a href="#" class="page-circle page-arrow" data-page="prev">
+    <i class="fa-solid fa-arrow-left"></i>
+  </a>
+ 
+  <a href="#" class="page-circle active" data-page="1">01</a>
+  <a href="#" class="page-circle" data-page="2">02</a>
+  <a href="#" class="page-circle" data-page="3">03</a>
+  <a href="#" class="page-circle" data-page="4">04</a>
+  <a href="#" class="page-circle" data-page="5">05</a>
+  <a href="#" class="page-circle" data-page="6">06</a>
+ 
+  <a href="#" class="page-circle page-arrow" data-page="next">
+    <i class="fa-solid fa-arrow-right"></i>
+  </a>
+</nav>
+            </div>
+        </div>
+            
+            </div>
+    </section>
 
     <script src="../../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../../components/navbar/navbar.js"></script>
@@ -31,3 +297,7 @@
 </body>
 
 </html>
+
+
+
+
