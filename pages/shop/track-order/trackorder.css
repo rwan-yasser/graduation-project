@@ -1,0 +1,9 @@
+button {
+    padding: 20px 30px;
+    color: white;
+    background-color: #FA8232;
+    border: 0;
+}
+button i {
+    padding-left: 10px;
+}

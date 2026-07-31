@@ -150,6 +150,10 @@
 .series {
   color: rgb(236, 13, 13);
 }
+.products-search-box input{
+  padding: 4% 20%;
+}
+
 .product-tag{
   position:absolute;
   top:16px;
@@ -176,7 +180,7 @@
   z-index: 9999999;
 }
 
-#products-grid{;
+#products-grid{
   align-content:start
 }
 

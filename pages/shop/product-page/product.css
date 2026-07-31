@@ -1,0 +1,145 @@
+.main-image-box{
+    border:1px solid #eee;
+    border-radius:8px;
+    background:#fff;
+    padding:20px;
+    text-align:center;
+  }
+  .main-image-box img{
+    max-width:100%;
+    max-height:340px;
+  }
+  .thumbs-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:14px;
+  }
+  .thumb-arrow{
+    color:#ff7a00;
+    cursor:pointer;
+    font-size:18px;
+  }
+  .thumb-item{
+    width:70px;
+    height:70px;
+    border:2px solid #eee;
+    border-radius:6px;
+    padding:4px;
+    cursor:pointer;
+    flex-shrink:0;
+  }
+  .thumb-item img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+  .thumb-item.active{
+    border-color:#ff7a00;
+  }
+  .stars { color:
+    #ff7a00;
+ }
+  .price-old {
+     text-decoration:line-through;
+      color:#999; 
+      font-size:16px;
+}
+
+  .price-new {
+     color:#ff7a00; 
+     font-size:26px;
+      font-weight:700;
+ }
+  .discount-badge 
+  { background:#EFD33D; 
+    color:black;
+     padding:5px 10px; 
+     font-size:13px; 
+}
+ 
+  .qty-box{
+    display:flex;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:6px;
+    width:110px;
+  }
+  .qty-box button{
+    background:none;
+     border:none;
+      padding:8px 12px;
+       font-size:16px;
+  }
+  .qty-box input{
+    border:none;
+     text-align:center;
+      width:40px; 
+      outline:none;
+  }
+ 
+  .btn-add-cart {
+    background:#FA8232;
+     color:#fff; 
+     border:none;
+  }
+  .btn-add-cart:hover { 
+    background:#e56d00;
+    color:#fff;
+ }
+  .btn-buy-now{
+    background:#fff; 
+    color:#FA8232; 
+    border:1px solid #ff7a00;
+  }
+.nav-tabs {
+    margin: auto;
+}
+   .nav-tabs .nav-link.active {
+    color:#ff7a00;
+    border-bottom:2px solid #ff7a00;
+    font-weight:600;
+  }
+  .nav-tabs .nav-link {
+     color:#666; 
+    }
+ 
+  .feature-item {
+     display:flex;
+      align-items:center; 
+      gap:10px;
+       margin-bottom:14px;
+     }
+  .feature-item i {
+     color:#ff7a00;
+      font-size:18px;
+       width:22px;
+     }
+     .related-card{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:8px;
+    padding:12px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-bottom:14px;
+  }
+  .related-card img{
+    width:60px; height:60px; object-fit:contain;
+  }
+  .related-card .name{
+    font-size:13px;
+    color:#333;
+    margin-bottom:4px;
+  }
+  .related-card .price{
+    color:#2DA5F3;
+    font-weight:600;
+    font-size:14px;
+  }
+  .section-title{
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:16px;
+  }

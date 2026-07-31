@@ -138,7 +138,7 @@ const tagsWrap = document.getElementById('tagsWrap');
   { id:2, name:"Samsung Galaxy A71", brand:"samsung", category:"smartphone", tags:["samsung"],
     price:320, rating:4, reviewCount:212, tag:"null",
     image:"../../assets/images/shop/phone.png" },
-  { id:3, name:"HP Pavilion Laptop", brand:"hp", category:"computer-laptop", tags:["asus-laptops"],
+  { id:3, name:"2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray", brand:"hp", category:"computer-laptop", tags:["asus-laptops"],
     price:650, rating:4, reviewCount:88, tag:null,
     image:"../../assets/images/shop/laptop.png" },
   { id:4, name:"LG Smart TV 55 inch", brand:"lg", category:"tv-homesappliances", tags:["smart-tv","tv"],
@@ -220,7 +220,7 @@ function renderProducts(list){
             <div class="btns position-absolute top-50  start-50 translate-middle d-flex ">
                 <button class=" p-1 ms-1 "><i class="fa-regular fa-heart"></i></button>
                 <button class=" p-1 ms-1"><i class="fa-solid fa-cart-shopping"></i></button>
-                <button class=" p-1 ms-1"><i class="fa-regular fa-eye"></i></button>
+                <button class=" p-1 ms-1"><a href="product-page/product.html"><i class="fa-regular fa-eye"></i></a></button>
                       </div>
                   </div>
 
