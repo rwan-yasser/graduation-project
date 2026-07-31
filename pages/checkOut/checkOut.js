@@ -86,6 +86,11 @@ showOrderSummaryTotals()
 
 let registerForm = document.getElementById('registerForm')
 let requiredInputs = registerForm.querySelectorAll(".required")
+let paymentMethods = document.querySelectorAll('input[name="radioDefault"]')
+let paymentError = document.getElementById('paymentError')
+let cardDetails = document.getElementById('cardDetails')
+let cardInputs = cardDetails.querySelectorAll("input")
+
 
 
 let toastBody = document.querySelector('.toast-body')
@@ -94,6 +99,22 @@ let toastBody = document.querySelector('.toast-body')
 const toastLiveExample = document.getElementById('liveToast')
 const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
 
+
+
+paymentMethods.forEach((radio) => {
+    radio.addEventListener("change", () => {
+        paymentError.innerText = ""
+        if (document.getElementById("radioDefault5").checked) {
+            cardDetails.classList.remove("d-none")
+        } else {
+            cardDetails.classList.add("d-none")
+            cardInputs.forEach((input) => {
+                input.value = ""
+                handleError(input)
+            })
+        }
+    })
+})
 
 
 let handleError = (ele, msg = "") => {
@@ -111,7 +132,6 @@ registerForm.addEventListener('input', (e) => {
         case "inputLastName":
             validation(e.target, /^[A-Za-z]{3,20}$/, 'Name must be at least 3 characters ')
             break
-
         case "inputZip":
             validation(e.target, /^\d{5,6}$/, 'Enter a valid ZIP code (5 or 6 numbers')
             break
@@ -138,7 +158,6 @@ registerForm.addEventListener('input', (e) => {
                 handleError(e.target);
             }
     }
-
 })
 
 
@@ -146,6 +165,7 @@ registerForm.addEventListener('input', (e) => {
 registerForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let allValid = true
+    let paymentSelected = false
 
     requiredInputs.forEach((input) => {
         if (input.value.trim() == "") {
@@ -157,6 +177,32 @@ registerForm.addEventListener("submit", (e) => {
             allValid = false
         }
     })
+
+    paymentMethods.forEach((radio) => {
+        if (radio.checked) {
+            paymentSelected = true
+        }
+    })
+
+    if (!paymentSelected) {
+        allValid = false
+        paymentError.innerText = "Please select a payment method"
+    } else {
+        paymentError.innerText = ""
+    }
+
+    if (document.getElementById("radioDefault5").checked) {
+        cardInputs.forEach((input) => {
+            if (input.value.trim() == "") {
+                handleError(input, "This field is required")
+                allValid = false
+                return
+            }
+            if (input.nextElementSibling.innerText != "") {
+                allValid = false
+            }
+        })
+    }
 
     if (allValid) {
         localStorage.removeItem('cart')

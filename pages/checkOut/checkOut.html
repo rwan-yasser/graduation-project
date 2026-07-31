@@ -270,6 +270,7 @@
                                 <div class="card border-secondary border-opacity-25">
                                     <div class="card-header bg-transparent fw-semibold py-3">
                                         Payment Option
+                                        <p id="paymentError" class=" text-danger mb-0"></p>
                                     </div>
                                     <div class="card-header bg-transparent py-3 ">
                                         <div class="hstack  flex-wrap row-gap-4 justify-content-around text-center">
@@ -324,25 +325,25 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=" card-body row gy-2 p-4">
+                                    <div id="cardDetails" class="d-none card-body row gy-2 p-4">
                                         <div class="col-md-12">
                                             <label for="inputCardName" class="form-label">Name on Card</label>
-                                            <input type="text" class="form-control required" id="inputCardName" />
+                                            <input type="text" class="form-control " id="inputCardName" />
                                             <p class=" text-danger mb-0"></p>
                                         </div>
                                         <div class="col-md-12">
                                             <label for="inputCardNumber" class="form-label">Card Number</label>
-                                            <input type="number" class="form-control required" id="inputCardNumber" />
+                                            <input type="number" class="form-control " id="inputCardNumber" />
                                             <p class=" text-danger mb-0"></p>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="inputExpireDate" class="form-label">Expire Date</label>
-                                            <input type="text" class="form-control required" id="inputExpireDate" placeholder="MM/YY" />
+                                            <input type="text" class="form-control " id="inputExpireDate" placeholder="MM/YY" />
                                             <p class=" text-danger mb-0"></p>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="inputCardCVC" class="form-label">CVC</label>
-                                            <input type="password" class="form-control required" id="inputCardCVC" />
+                                            <input type="password" class="form-control " id="inputCardCVC" />
                                             <p class=" text-danger mb-0"></p>
                                         </div>
                                     </div>
