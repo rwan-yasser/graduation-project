@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="../../vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../vendor/bootstrap/bootstrap.min.css">
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../../shared/main.css">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="navbar/navbar.css">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="footer/footer.css">
+    <link rel="stylesheet" href="footer/footer-responsive.css">
+    <!-- Shopping Card CSS -->
+    <link rel="stylesheet" href="shoppingCart.css">
+</head>
+
+<body>
+
+    <main>
+        <div id="nav-section">
+            <!-- 2. Blue Header Container (Navigation & Middle Nav) -->
+            <div class="blue-header-bg">
+
+                <!-- Top Nav Info Header -->
+                <div class="top-nav-bar py-2 border-bottom-blue">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <p class="welcome-msg mb-0">Welcome to Clicon online eCommerce store.</p>
+
+                        <div class="top-nav-right d-flex align-items-center gap-3">
+                            <div class="social-links d-flex align-items-center gap-2">
+                                <span>Follow us:</span>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                            <span class="v-divider"></span>
+                            <div class="lang-curr-select d-flex gap-2">
+                                <select class="form-select form-select-sm border-0 bg-transparent text-white">
+                                <option value="eng" class="text-dark">Eng</option>
+                                </select>
+                                <select class="form-select form-select-sm border-0 bg-transparent text-white">
+                                <option value="usd" class="text-dark">USD</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Nav (Logo, Search, Cart) -->
+                <div class="middle-nav-bar py-3">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <!-- Logo -->
+                        <a href="#" class="logo d-flex align-items-center gap-2 text-white">
+                            <i class="fa-regular fa-circle-dot logo-icon"></i>
+                            <span class="logo-text">CLICON</span>
+                        </a>
+
+                        <!-- Search Box -->
+                        <form class="search-box position-relative" id="searchForm">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Search for anything...">
+                            <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+
+                        <!-- User Icons -->
+                        <div class="nav-icons d-flex align-items-center gap-3 text-white">
+                            <a href="shoppingCart.html" class="cart-icon position-relative text-white">
+                                <i class="fa-solid fa-cart-shopping fs-5"></i>
+                                <span id="cartIcon" class="cart-badge"></span>
+                            </a>
+                            <a href="../wishlist/wishlist.html" class="cart-icon position-relative text-white">
+                                <i class="fa-regular fa-heart fs-5"></i>
+                                <span id="wishlistIcon" class="cart-badge"></span>
+                            </a>
+                            <!-- الحاوية الخاصة بأيقونة المستخدم والـ Popup معاً -->
+                            <div class="user-menu-container position-relative">
+                                <a href="#" class="icon" id="userIconToggle">
+                                    <i class="fa-regular fa-user"></i>
+                                </a>
+                                <!-- الـ Popup مخفية هنا وهتظهر تحت الأيقونة -->
+                                <div class="login-popup position-absolute bg-white shadow rounded p-4 d-none" id="loginPopup" style="top: 120%; right: 0; min-width: 280px; z-index: 1050;">
+                                    <h4 class="popup-title">Sign in to your account</h4>
+
+                                    <form>
+                                        <div class="input-group mb-3 text-start">
+                                            <label for="email" class="form-label small text-muted mb-1">Email
+                                            Address</label> <input type="email" id="email" class="form-control w-100 py-2" placeholder=" ">
+                                        </div>
+
+                                        <div class="input-group mb-4">
+                                            <div class="password-labels">
+                                                <label for="password" class="form-label small text-muted mb-0">Password</label> <a href="#" class="forgot-link">Forget Password</a>
+                                            </div>
+                                            <div class="password-wrapper ">
+                                                <input type="password" id="password" class="form-control w-100 py-2">
+                                                <span class="eye-icon position-absolute" id="togglePassword">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </span>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-login">
+                                        LOGIN <i class="fa-solid fa-arrow-right ms-2" style="font-size: 18px;"></i>
+                                    </button>
+
+                                        <div class="divider">
+                                            <span>Don’t have account</span>
+                                        </div>
+
+                                        <a href="clicon-signin/index.html" class="btn btn-create btn-outline-dark w-100 py-2 fw-bold d-block text-center text-decoration-none">
+                                        CREATE ACCOUNT
+                                    </a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 3. Bottom White Nav (Categories & Links & Phone) -->
+            <nav class="bottom-nav py-2 border-bottom shadow-sm">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-4">
+                        <!-- Category Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn category-btn dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+                            All Category
+                        </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                                <li><a class="dropdown-item" href="#">Computers</a></li>
+                                <li><a class="dropdown-item" href="#">Smartphones</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Links -->
+                        <div class="menu-links d-flex align-items-center gap-3">
+                            <a href="../shop/shop.html"><i class="fa-solid fa-location-dot"></i> Track Order</a>
+                            <a href="#"><i class="fa-solid fa-code-compare"></i> Compare</a>
+                            <a href="../../about pages/about html pages/customerSupport.html"><i class="fa-solid fa-headset"></i> Customer Support</a>
+                            <a href="../../clicon-signin/index.html"><i class="fa-regular fa-circle-question"></i> Need Help</a>
+                        </div>
+                    </div>
+
+                    <!-- Phone Contact -->
+                    <div class="phone-contact d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-phone-volume text-warning"></i> +1-202-555-0104
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- ? -->
+
+        <section class="bg-body-secondary py-2 text-secondary">
+            <div class="container">
+                <a href="../../index.html">
+                    <i class="fa-regular fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <i class="fa-solid fa-angle-right"></i>
+                <a href="shoppingCart.html" class="text-info">Shoping Card</a>
+            </div>
+        </section>
+        <section id="emptyCart" class="d-none justify-content-center  text-center">
+            <div class="w-75 my-5 ">
+                <img src="../../assets/images/cartImgs/empty-shopping-cart-illustration-concept-on-white-background-vector.jpg" class="w-100" alt="">
+                <p class="display-4 fw-bold mb-4">Your Cart is <span class="text-danger">Empty!</span></p>
+                <a href="../shop/shop.html" class="btn btn-danger  rounded-1  text-uppercase fw-semibold p-3  ">
+                    <i class="fa-solid fa-arrow-left  me-2"></i> return to shop
+                </a>
+            </div>
+        </section>
+        <section id="cartContent">
+            <div class="container p-3  my-4">
+                <div class="row align-items-start mx-0 gy-4 gy-xl-0">
+                    <div class=" col-12 col-xl-8 border border-1 rounded-2 py-3 ">
+                        <h4>Shoping Card</h4>
+                        <div class="row   text-uppercase  text-body-secondary bg-body-secondary py-1  my-3 border-top border-bottom ">
+                            <div class="col">
+                                <span>products</span>
+                            </div>
+                            <div class="col-2 d-none d-md-block">
+                                <span>price</span>
+                            </div>
+                            <div class="col-3 d-none d-md-block">
+                                <span>quantity</span>
+                            </div>
+                            <div class="col-2 d-none d-md-block">
+                                <span>sub-total</span>
+                            </div>
+                        </div>
+                        <div id="cartItems" class=" d-flex flex-column row-gap-5 row-gap-sm-4 ">
+                        </div>
+                        <div class=" row border-top   px-3  pt-3 mt-4 justify-content-between">
+                            <a href="../shop/shop.html" class="btn-outline-blue   btn w-auto rounded-1  text-uppercase fw-semibold py-2 px-3 ">
+                                <i class="fa-solid fa-arrow-left  me-2"></i> return to shop
+                            </a>
+                            <button onclick="updateCart()" class="btn-outline-blue   btn w-auto rounded-1 text-uppercase fw-semibold py-2 px-3 ">
+                                update cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class=" col-12 col-xl-4 px-0  px-xl-3 ">
+                        <div class="row gy-4 ">
+                            <div class="col-12 col-md-6 col-xl-12">
+                                <div class="card ">
+                                    <div class="card-body row gy-3 ">
+                                        <h5 class="card-title ">Card Totals</h5>
+                                        <span class="text-body-secondary col-6 ">Sub-total</span>
+                                        <span id="checkoutSubTotal" class="fw-semibold col text-end "></span>
+                                        <span class="text-body-secondary col-6 ">Shipping</span>
+                                        <span class="fw-semibold col text-end ">Free</span>
+                                        <span class="text-body-secondary col-6 ">Discount</span>
+                                        <span id="checkoutDiscount" class="fw-semibold col text-end ">$--</span>
+                                        <span class="text-body-secondary col-6 ">Tax</span>
+                                        <span class="fw-semibold col text-end ">$61.99</span>
+                                    </div>
+                                    <div class="card-footer bg-transparent fw-semibold ">
+                                        <div class="d-flex justify-content-between ">
+                                            <span>Total</span>
+                                            <span id="checkoutTotal"></span>
+                                        </div>
+                                        <a href="../checkOut/checkOut.html" class="btn-orange btn fw-semibold col-12 py-2 mt-3 mb-2 text-uppercase rounded-1 ">
+                                            Proceed to Checkout <i class=" ms-2 fa-solid fa-arrow-right "></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-6 col-xl-12 ">
+                                <div class="card  ">
+                                    <div class="card-header bg-transparent py-3 fw-semibold ">
+                                        Coupon Code
+                                    </div>
+                                    <div class="card-body">
+                                        <form onsubmit="applyCoupon(event)">
+                                            <input type="text" class="form-control " id="copounInput" placeholder="Enter Code">
+                                            <div></div>
+                                            <button class="btn-blue btn rounded-1 mt-3 text-uppercase fw-semibold py-2 px-3 ">apply coupon</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+                <div id="liveToast" class="toast border-info" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Notification</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ? -->
+        <div id="footer-section">
+            <footer class="footer-section">
+                <div class="container footer-content">
+
+                    <!-- معلومات التواصل -->
+                    <div class="footer-col brand-col">
+                        <div class="footer-logo">
+                            <span class="logo-icon"></span> CLICON
+                        </div>
+                        <p class="support-title">Customer Supports:</p>
+                        <h4 class="phone-number">(629) 555-0129</h4>
+                        <p class="address">4517 Washington Ave.<br>Manchester, Kentucky 39495</p>
+                        <p class="email"><strong>info@kinbo.com</strong></p>
+                    </div>
+
+                    <!-- التصنيفات (مربوطة بأسماء الصفحات) -->
+                    <div class="footer-col">
+                        <h4>TOP CATEGORY</h4>
+                        <ul>
+                            <li><a href="computer.html">Computer & Laptop</a></li>
+                            <li><a href="smartphone.html">SmartPhone</a></li>
+                            <li><a href="headphone.html">Headphone</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                            <li><a href="camera.html">Camera & Photo</a></li>
+                            <li><a href="tv-homes.html">TV & Homes</a></li>
+                        </ul>
+                        <a href="all-products.html" class="browse-all">Browse All Product &rarr;</a>
+                    </div>
+
+                    <!-- روابط سريعة -->
+                    <div class="footer-col">
+                        <h4>QUICK LINKS</h4>
+                        <ul>
+                            <li><a href="../shop/shop.html">Shop Product</a></li>
+                            <li><a href="../shoppingCart/shoppingCart.html">Shoping Cart</a></li>
+                            <li><a href="../wishlist/wishlist.html">Wishlist</a></li>
+                            <li><a href="compare.html">Compare</a></li>
+                            <li><a href="../shop/shop.html">Track Order</a></li>
+                            <li><a href="../../about pages/about html pages/customerSupport.html">Customer Help</a></li>
+                            <li><a href="../../about pages/about html pages/aboutUs.html">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- التطبيقات (coming-soon-btn) -->
+                    <div class="footer-col app-col">
+                        <h4>DOWNLOAD APP</h4>
+                        <a href="#" class="app-btn coming-soon-btn">
+                            <i class="fab fa-google-play app-icon"></i>
+                            <div class="app-text">
+                                <span>Get it now</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="#" class="app-btn coming-soon-btn">
+                            <i class="fab fa-apple app-icon"></i>
+                            <div class="app-text">
+                                <span>Get it now</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- الكلمات المفتاحية -->
+                    <div class="footer-col tags-col">
+                        <h4>POPULAR TAG</h4>
+                        <div class="tags-container">
+                            <a href="#">Game</a>
+                            <a href="#">iPhone</a>
+                            <a href="#">TV</a>
+                            <a href="#">Asus Laptops</a>
+                            <a href="#">Macbook</a>
+                            <a href="#">SSD</a>
+                            <a href="#">Graphics Card</a>
+                            <a href="#">Power Bank</a>
+                            <a href="#">Smart TV</a>
+                            <a href="#">Speaker</a>
+                            <a href="#">Tablet</a>
+                            <a href="#">Microwave</a>
+                            <a href="#">Samsung</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الحقوق السفلية -->
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p>Kinbo - eCommerce Template &copy; 2026. Design by Templatecookie</p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- ================= النوافذ المنبثقة (Modals) ================= -->
+
+            <!-- (1) نافذة رسالة الاشتراك في النشرة البريدية -->
+            <div id="subscribe-modal" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3>Thank You!</h3>
+                    <p>You have successfully subscribed to our newsletter.</p>
+                </div>
+            </div>
+
+            <!-- (2) نافذة التطبيقات (Coming Soon) -->
+            <div id="coming-soon-modal" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="close-coming-soon close-modal">&times;</span>
+                    <i class="fas fa-mobile-alt" style="font-size: 40px; color: #fa8232; margin-bottom: 15px;"></i>
+                    <h3 style="color: #fa8232; margin-bottom: 15px; font-size: 24px;">Coming Soon!</h3>
+                    <p style="color: #333; font-size: 16px; line-height: 1.5;">Our mobile application is currently under development. Stay tuned!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../vendor/bootstrap/bootstrap.bundle.min.js "></script>
+    <script src="footer/footer.js"></script>
+    <script src="shoppingCart.js"></script>
+</body>
+
+</html>

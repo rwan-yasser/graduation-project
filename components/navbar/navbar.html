@@ -16,7 +16,99 @@
 </head>
 
 <body>
+    <!-- 2. Blue Header Container (Navigation & Middle Nav) -->
+    <div class="blue-header-bg">
 
+        <!-- Top Nav Info Header -->
+        <div class="top-nav-bar py-2 border-bottom-blue">
+            <div class="container d-flex justify-content-between align-items-center">
+                <p class="welcome-msg mb-0">Welcome to Clicon online eCommerce store.</p>
+
+                <div class="top-nav-right d-flex align-items-center gap-3">
+                    <div class="social-links d-flex align-items-center gap-2">
+                        <span>Follow us:</span>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <span class="v-divider"></span>
+                    <div class="lang-curr-select d-flex gap-2">
+                        <select class="form-select form-select-sm border-0 bg-transparent text-white">
+                            <option value="eng" class="text-dark">Eng</option>
+                        </select>
+                        <select class="form-select form-select-sm border-0 bg-transparent text-white">
+                            <option value="usd" class="text-dark">USD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Nav (Logo, Search, Cart) -->
+        <div class="middle-nav-bar py-3">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <a href="#" class="logo d-flex align-items-center gap-2 text-white">
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <span class="logo-text">CLICON</span>
+                </a>
+
+                <!-- Search Box -->
+                <form class="search-box position-relative" id="searchForm">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search for anything...">
+                    <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <!-- User Icons -->
+                <div class="nav-icons d-flex align-items-center gap-3 text-white">
+                    <a href="#" class="cart-icon position-relative text-white">
+                        <i class="fa-solid fa-cart-shopping fs-5"></i>
+                        <span class="cart-badge">2</span>
+                    </a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-heart fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="fa-regular fa-user fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. Bottom White Nav (Categories & Links & Phone) -->
+    <nav class="bottom-nav py-2 border-bottom shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-4">
+                <!-- Category Dropdown -->
+                <div class="dropdown">
+                    <button class="btn category-btn dropdown-toggle d-flex align-items-center gap-2" type="button"
+                        data-bs-toggle="dropdown">
+                        All Category
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Electronics</a></li>
+                        <li><a class="dropdown-item" href="#">Computers</a></li>
+                        <li><a class="dropdown-item" href="#">Smartphones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div class="menu-links d-flex align-items-center gap-3">
+                    <a href="#"><i class="fa-solid fa-location-dot"></i> Track Order</a>
+                    <a href="#"><i class="fa-solid fa-code-compare"></i> Compare</a>
+                    <a href="about pages/about html pages/customerSupport.html"><i class="fa-solid fa-headset"></i> Customer Support</a>
+                    <a href="#"><i class="fa-regular fa-circle-question"></i> Need Help</a>
+                </div>
+            </div>
+
+            <!-- Phone Contact -->
+            <div class="phone-contact d-flex align-items-center gap-2">
+                <i class="fa-solid fa-phone-volume text-warning"></i> +1-202-555-0104
+            </div>
+        </div>
+    </nav>
+
+    </header>
 
     <script src="../../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="navbar.js"></script>
