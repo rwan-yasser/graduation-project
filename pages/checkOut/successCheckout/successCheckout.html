@@ -79,7 +79,47 @@
                                 <i class="fa-regular fa-heart fs-5"></i>
                                 <span id="wishlistIcon" class="cart-badge"></span>
                             </a>
-                            <a href="#" class="text-white"><i class="fa-regular fa-user fs-5"></i></a>
+                            <!-- الحاوية الخاصة بأيقونة المستخدم والـ Popup معاً -->
+                            <div class="user-menu-container position-relative">
+                                <a href="#" class="icon" id="userIconToggle">
+                                    <i class="fa-regular fa-user"></i>
+                                </a>
+                                <!-- الـ Popup مخفية هنا وهتظهر تحت الأيقونة -->
+                                <div class="login-popup position-absolute bg-white shadow rounded p-4 d-none" id="loginPopup" style="top: 120%; right: 0; min-width: 280px; z-index: 1050;">
+                                    <h4 class="popup-title">Sign in to your account</h4>
+
+                                    <form>
+                                        <div class="input-group mb-3 text-start">
+                                            <label for="email" class="form-label small text-muted mb-1">Email
+                                            Address</label> <input type="email" id="email" class="form-control w-100 py-2" placeholder=" ">
+                                        </div>
+
+                                        <div class="input-group mb-4">
+                                            <div class="password-labels">
+                                                <label for="password" class="form-label small text-muted mb-0">Password</label> <a href="#" class="forgot-link">Forget Password</a>
+                                            </div>
+                                            <div class="password-wrapper ">
+                                                <input type="password" id="password" class="form-control w-100 py-2">
+                                                <span class="eye-icon position-absolute" id="togglePassword">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </span>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-login">
+                                        LOGIN <i class="fa-solid fa-arrow-right ms-2" style="font-size: 18px;"></i>
+                                    </button>
+
+                                        <div class="divider">
+                                            <span>Don’t have account</span>
+                                        </div>
+
+                                        <a href="clicon-signin/index.html" class="btn btn-create btn-outline-dark w-100 py-2 fw-bold d-block text-center text-decoration-none">
+                                        CREATE ACCOUNT
+                                    </a>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,10 +144,10 @@
 
                         <!-- Links -->
                         <div class="menu-links d-flex align-items-center gap-3">
-                            <a href="#"><i class="fa-solid fa-location-dot"></i> Track Order</a>
+                            <a href="../shop/shop.html"><i class="fa-solid fa-location-dot"></i> Track Order</a>
                             <a href="#"><i class="fa-solid fa-code-compare"></i> Compare</a>
-                            <a href="#"><i class="fa-solid fa-headset"></i> Customer Support</a>
-                            <a href="#"><i class="fa-regular fa-circle-question"></i> Need Help</a>
+                            <a href="../../about pages/about html pages/customerSupport.html"><i class="fa-solid fa-headset"></i> Customer Support</a>
+                            <a href="../../clicon-signin/index.html"><i class="fa-regular fa-circle-question"></i> Need Help</a>
                         </div>
                     </div>
 
@@ -139,7 +179,7 @@
                 <h3 class="fw-semibold">Your order is successfully place</h3>
                 <p class="text-secondary">Pellentesque sed lectus nec tortor tristique accumsan quis dictum risus. Donec volutpat mollis nulla non facilisis.</p>
                 <div class="d-flex flex-wrap gap-3 mt-4 ">
-                    <a href="./../../index.html" class="btn-outline-orange btn fw-semibold col-12 col-sm-6 py-3  text-uppercase rounded-1 ">
+                    <a href="../../../index.html" class="btn-outline-orange btn fw-semibold col-12 col-sm-6 py-3  text-uppercase rounded-1 ">
                         <i class="me-2 fa-solid fa-layer-group"></i> go to dashboard
                     </a>
                     <a href="" class="btn-orange btn fw-semibold col py-3   text-uppercase rounded-1 ">
@@ -183,13 +223,13 @@
                     <div class="footer-col">
                         <h4>QUICK LINKS</h4>
                         <ul>
-                            <li><a href="shop.html">Shop Product</a></li>
-                            <li><a href="cart.html">Shoping Cart</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="../../shop/shop.html">Shop Product</a></li>
+                            <li><a href="../../shoppingCart/shoppingCart.html">Shoping Cart</a></li>
+                            <li><a href="../../wishlist/wishlist.html">Wishlist</a></li>
                             <li><a href="compare.html">Compare</a></li>
-                            <li><a href="track-order.html">Track Order</a></li>
-                            <li><a href="help.html">Customer Help</a></li>
-                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="../../shop/shop.html">Track Order</a></li>
+                            <li><a href="../../../about pages/about html pages/customerSupport.html">Customer Help</a></li>
+                            <li><a href="../../../about pages/about html pages/aboutUs.html">About Us</a></li>
                         </ul>
                     </div>
 

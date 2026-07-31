@@ -1,20 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    
+
 
 
     // =================  كود التطبيقات (Coming Soon) =================
-   
+
+    const subscribeModal = document.querySelectorAll('#subscribe-modal');
     const comingSoonBtns = document.querySelectorAll('.coming-soon-btn');
     const comingSoonModal = document.getElementById('coming-soon-modal');
     const closeComingSoonModal = document.querySelector('.close-coming-soon');
 
     if (comingSoonBtns.length > 0 && comingSoonModal && closeComingSoonModal) {
-        
-        
+
+
         comingSoonBtns.forEach(function(btn) {
             btn.addEventListener('click', function(event) {
-                event.preventDefault(); 
-                comingSoonModal.style.display = 'flex'; 
+                event.preventDefault();
+                comingSoonModal.style.display = 'flex';
             });
         });
 

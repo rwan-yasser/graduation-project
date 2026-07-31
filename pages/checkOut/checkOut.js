@@ -6,9 +6,20 @@ console.log(wishlist);
 let cartIcon = document.getElementById('cartIcon')
 let wishlistIcon = document.getElementById('wishlistIcon')
 
-cartIcon.innerHTML = (!cart || cart.length == 0) ? '' : `<span>${cart.length}</span>`
-wishlistIcon.innerHTML = (!wishlist || wishlist.length == 0) ? '' : `<span>${wishlist.length}</span>`
-
+if (!cart || cart.length == 0) {
+    cartIcon.innerText = ''
+    cartIcon.classList.remove('cart-badge')
+} else {
+    cartIcon.innerText = cart.length
+    cartIcon.classList.add('cart-badge')
+}
+if (!wishlist || wishlist.length == 0) {
+    wishlistIcon.innerText = ''
+    wishlistIcon.classList.remove('cart-badge')
+} else {
+    wishlistIcon.innerText = wishlist.length
+    wishlistIcon.classList.add('cart-badge')
+}
 
 let emptyPage = document.getElementById('emptyPage')
 let checkoutContent = document.getElementById('checkoutContent')
@@ -76,6 +87,15 @@ showOrderSummaryTotals()
 let registerForm = document.getElementById('registerForm')
 let requiredInputs = registerForm.querySelectorAll(".required")
 
+
+let toastBody = document.querySelector('.toast-body')
+
+
+const toastLiveExample = document.getElementById('liveToast')
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+
+
+
 let handleError = (ele, msg = "") => {
     ele.nextElementSibling.innerText = msg
 }
@@ -141,7 +161,11 @@ registerForm.addEventListener("submit", (e) => {
     if (allValid) {
         localStorage.removeItem('cart')
         localStorage.removeItem('discount')
-        cartIcon.innerHTML = ''
+        cartIcon.innerText = ''
+        cartIcon.classList.remove('cart-badge')
         window.location.href = "successCheckout/successCheckout.html"
+    } else {
+        toastBody.innerText = "Missing or Wrong Fields"
+        toastBootstrap.show()
     }
 })

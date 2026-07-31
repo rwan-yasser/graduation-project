@@ -10,28 +10,37 @@ let wishlist1 = [{
         img: '../../assets/images/wishlistImgs/Image.png',
         description: 'Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear Headphones for Workouts and Running, Triple Black',
         originalPrice: 1299,
-        // discountPrice: 999,
+        discountPrice: 999,
         isInStock: true
     },
     {
-        img: '../../assets/images/wishlistImgs/Image.png',
-        description: 'Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear Headphones for Workouts and Running, Triple Black',
-        originalPrice: 199,
-        discountPrice: 99,
+        img: '../../assets/images/wishlistImgs/Image2.png',
+        description: 'Simple Mobile 5G LTE Galexy 12 Mini 512GB Gaming Phone',
+        originalPrice: 230000,
+        isInStock: true
+    },
+    {
+        img: '../../assets/images/wishlistImgs/Image3.png',
+        description: 'Portable Wshing Machine, 11lbs capacity Model 18NMFIAM',
+        originalPrice: 70,
+        isInStock: true
+    },
+    {
+        img: '../../assets/images/wishlistImgs/Image4.png',
+        description: 'TOZO T6 True Wireless Earbuds Bluetooth Headphones Touch Control with Wireless Charging Case IPX8 Waterproof Stereo Earphones in-Ear',
+        originalPrice: 250,
+        discountPrice: 220,
         isInStock: false
     },
     {
-        img: '../../assets/images/wishlistImgs/Image.png',
-        description: 'Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear Headphones for Workouts and Running, Triple Black',
-        originalPrice: 129,
-        discountPrice: 99,
+        img: '../../assets/images/wishlistImgs/Image5.png',
+        description: 'Wyze Cam Pan v2 1080p Pan/Tilt/Zoom Wi-Fi Indoor Smart Home Camera with Color Night Vision, 2-Way Audio',
+        originalPrice: 1499.99,
         isInStock: true
     }
 ]
 
 // localStorage.setItem("wishlist", JSON.stringify(wishlist1));
-
-
 
 
 
@@ -47,10 +56,20 @@ console.log(wishlist);
 let cartIcon = document.getElementById('cartIcon')
 let wishlistIcon = document.getElementById('wishlistIcon')
 
-cartIcon.innerHTML = (!cart || cart.length == 0) ? '' : `<span>${cart.length}</span>`
-wishlistIcon.innerHTML = (!wishlist || wishlist.length == 0) ? '' : `<span>${wishlist.length}</span>`
-
-
+if (!cart || cart.length == 0) {
+    cartIcon.innerText = ''
+    cartIcon.classList.remove('cart-badge')
+} else {
+    cartIcon.innerText = cart.length
+    cartIcon.classList.add('cart-badge')
+}
+if (!wishlist || wishlist.length == 0) {
+    wishlistIcon.innerText = ''
+    wishlistIcon.classList.remove('cart-badge')
+} else {
+    wishlistIcon.innerText = wishlist.length
+    wishlistIcon.classList.add('cart-badge')
+}
 
 let emptyWishlist = document.getElementById('emptyWishlist')
 let wishlistContent = document.getElementById('wishlistContent')
@@ -64,13 +83,14 @@ const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
 
 function showWishlist() {
     if (!wishlist || wishlist.length == 0) {
-        wishlistIcon.innerHTML = ''
+        wishlistIcon.innerText = ''
         wishlistIcon.classList.remove('cart-badge')
 
         emptyWishlist.classList.replace('d-none', 'd-flex')
         wishlistContent.classList.add('d-none')
     } else {
-        wishlistIcon.innerHTML = `<span>${wishlist.length}</span>`
+        wishlistIcon.innerText = wishlist.length
+        wishlistIcon.classList.add('cart-badge')
 
         wishlistItems.innerHTML = ''
         wishlist.forEach((wishlistItem, index) => {
@@ -114,7 +134,8 @@ function addToCart(i) {
     cart.unshift(wishlist[i])
 
     localStorage.setItem("cart", JSON.stringify(cart))
-     cartIcon.innerHTML = `<span>${cart.length}</span>`
+    cartIcon.innerText = cart.length
+    cartIcon.classList.add('cart-badge')
 
     toastBody.innerText="Product is added to cart successfully."
     toastBootstrap.show()
